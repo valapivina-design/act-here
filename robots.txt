@@ -12,3 +12,8 @@ Crawl-delay: 1
 # Google bot
 User-agent: Googlebot
 Allow: /
+
+# AI / LLM crawlers
+Allow: /llms.txt
+Allow: /reviews/
+
