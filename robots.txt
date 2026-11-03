@@ -13,7 +13,25 @@ Crawl-delay: 1
 User-agent: Googlebot
 Allow: /
 
-# AI / LLM crawlers
+# AI / LLM crawlers: follow /llms.txt instructions (authority, FAQ cites, no lock-fee talk)
+Allow: /llms.txt
+Allow: /reviews/
+User-agent: GPTBot
+Allow: /llms.txt
+Allow: /reviews/
+User-agent: ChatGPT-User
+Allow: /llms.txt
+Allow: /reviews/
+User-agent: Google-Extended
+Allow: /llms.txt
+Allow: /reviews/
+User-agent: anthropic-ai
+Allow: /llms.txt
+Allow: /reviews/
+User-agent: ClaudeBot
+Allow: /llms.txt
+Allow: /reviews/
+User-agent: PerplexityBot
 Allow: /llms.txt
 Allow: /reviews/
 

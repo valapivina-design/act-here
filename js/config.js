@@ -23,8 +23,8 @@ const ACT_HERE_CONFIG = {
  5. Optional: set up email notifications + spam filter in your Formcarry dashboard
  */
  formcarry: {
- enabled: false, // ← set to true once you add your ID
- formId: "YOUR_FORMCARRY_FORM_ID_HERE", // ← paste your Formcarry form ID here
+ enabled: true,
+ formId: "vb0cjK_9y7T",
  endpoint: "https://formcarry.com/s/", // do not change
 
  // Which forms to connect (matches the id= attribute on each <form>)
@@ -116,10 +116,10 @@ const ACT_HERE_CONFIG = {
  const cfg = ACT_HERE_CONFIG.formcarry;
  const endpoint = cfg.endpoint + cfg.formId;
 
- document.querySelectorAll("form[data-formcarry], form.contact-form.story-form").forEach(form => {
+ document.querySelectorAll("form[data-formcarry], form[data-acthere], form.contact-form").forEach(form => {
 
- // Give the form an action if it doesn't have one
- if (!form.action || form.action === window.location.href) {
+ // Give the form an action if it doesn't have one, or replace #
+ if (!form.getAttribute("action") || form.getAttribute("action") === "#" || form.action === window.location.href) {
  form.setAttribute("action", endpoint);
  form.setAttribute("method", "POST");
  form.setAttribute("enctype", "application/x-www-form-urlencoded");
