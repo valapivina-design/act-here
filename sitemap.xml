@@ -26,7 +26,10 @@
   <url><loc>https://act-here.uk/blog/romance-scam-networks.html</loc><lastmod>2024-10-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://act-here.uk/blog/crypto-recovery-guide.html</loc><lastmod>2024-09-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://act-here.uk/blog/recovery-scams-warning.html</loc><lastmod>2024-08-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <!-- Coinbase Pages — high-priority keyword targets -->
+  <url><loc>https://act-here.uk/blog/blockchain-forensics-guide.html</loc><lastmod>2024-08-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://act-here.uk/blog/how-to-report-ftc-2025.html</loc><lastmod>2025-01-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://act-here.uk/blog/pig-butchering-2025.html</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <!-- Coinbase Pages - high-priority keyword targets -->
   <url><loc>https://act-here.uk/pages/coinbase-support.html</loc><lastmod>2025-03-01</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://act-here.uk/reviews/coinbase-scam.html</loc><lastmod>2025-03-01</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <!-- Broker Reviews -->
@@ -138,11 +141,15 @@
   <url><loc>https://act-here.uk/reviews/zenstox-review.html</loc><lastmod>2025-08-31</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://act-here.uk/reviews/zinsbaustein-review.html</loc><lastmod>2025-08-31</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 <!-- German Section -->
-  <url><loc>https://act-here.uk/de/</loc><lastmod>2025-01-01</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://act-here.uk/de/betrug-melden.html</loc><lastmod>2025-01-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://act-here.uk/de/krypto-betrug.html</loc><lastmod>2025-01-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://act-here.uk/de/anlagebetrug.html</loc><lastmod>2025-01-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://act-here.uk/de/behoerden.html</loc><lastmod>2025-01-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://act-here.uk/de/</loc><lastmod>2025-11-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://act-here.uk/de/krypto-betrug.html</loc><lastmod>2025-11-03</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://act-here.uk/de/broker-auszahlung-problem.html</loc><lastmod>2025-11-03</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://act-here.uk/de/broker-betrug.html</loc><lastmod>2025-11-03</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://act-here.uk/de/geld-zurueck-broker.html</loc><lastmod>2025-11-03</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://act-here.uk/de/bonusfalle.html</loc><lastmod>2025-11-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://act-here.uk/de/betrug-melden.html</loc><lastmod>2025-11-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://act-here.uk/de/anlagebetrug.html</loc><lastmod>2025-11-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://act-here.uk/de/behoerden.html</loc><lastmod>2025-11-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://act-here.uk/pages/privacy-policy.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://act-here.uk/pages/terms-of-service.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://act-here.uk/pages/cookie-policy.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>

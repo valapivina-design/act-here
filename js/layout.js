@@ -91,11 +91,13 @@ const FOOTER_HTML = `
  <li><a href="pages/terms-of-service.html">Terms of Service</a></li>
  <li><a href="pages/cookie-policy.html">Cookie Policy</a></li>
  <li><a href="pages/disclaimer.html">Disclaimer</a></li>
- <li><a href="de/index.html">Deutsch</a></li>
- </ul>
- </div>
- </div>
- <div class="footer-bottom">
+        <li><a href="de/index.html">Deutsch</a></li>
+        <li><a href="de/krypto-betrug.html">Krypto-Betrug</a></li>
+        <li><a href="de/broker-betrug.html">Broker Betrug</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
  <p>© 2025 Act Here · act-here.uk · 25 Cabot Square, London, E14 4QZ · Solicitor advertising. Prior results do not guarantee a similar outcome.</p>
  <p class="footer-legal-links">
  <a href="pages/privacy-policy.html">Privacy Policy</a>
