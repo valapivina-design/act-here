@@ -1,0 +1,13 @@
+.DS_Store
+*.md
+README
+README.*
+readme
+readme.*
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+.cursor/
+node_modules/

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Broker Reviews | Act Here</title>
+ <meta name="description" content="Search Act Here broker and platform complaint reviews by company name. Complaints, warnings, and UK litigation counsel for financial disputes.">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="https://act-here.uk/reviews/">
+ <link rel="stylesheet" href="../css/style.css">
+ <style>
+ .broker-search-wrap {
+ max-width: 640px;
+ margin: 0 auto;
+ position: relative;
+ }
+ .broker-search-label {
+ display: block;
+ font-size: 0.72rem;
+ font-weight: 600;
+ letter-spacing: 0.12em;
+ text-transform: uppercase;
+ color: var(--text-muted);
+ margin-bottom: 0.65rem;
+ }
+ .broker-search-input {
+ width: 100%;
+ padding: 1rem 1.2rem;
+ border: 1.5px solid var(--navy);
+ border-radius: 4px;
+ font-family: var(--font-sans);
+ font-size: 1rem;
+ color: var(--navy);
+ background: var(--white);
+ }
+ .broker-search-input:focus {
+ outline: none;
+ box-shadow: 0 0 0 3px rgba(152, 175, 159, 0.35);
+ }
+ .broker-search-hint {
+ margin-top: 0.85rem;
+ font-size: 0.88rem;
+ color: var(--text-muted);
+ line-height: 1.6;
+ }
+ .broker-results {
+ list-style: none;
+ margin: 0.75rem 0 0;
+ padding: 0;
+ border: 1px solid var(--line);
+ border-radius: 6px;
+ background: var(--white);
+ max-height: 360px;
+ overflow-y: auto;
+ display: none;
+ }
+ .broker-results.open { display: block; }
+ .broker-results li a {
+ display: block;
+ padding: 0.95rem 1.15rem;
+ text-decoration: none;
+ color: var(--navy);
+ border-bottom: 1px solid var(--line-soft);
+ font-weight: 600;
+ font-size: 0.95rem;
+ transition: background 0.15s;
+ }
+ .broker-results li:last-child a { border-bottom: none; }
+ .broker-results li a:hover.broker-results li a:focus {
+ background: var(--off-white);
+ color: var(--sage-dark);
+ }
+ .broker-results li a span {
+ display: block;
+ font-weight: 400;
+ font-size: 0.78rem;
+ color: var(--text-muted);
+ margin-top: 0.2rem;
+ }
+ .broker-empty {
+ padding: 1rem 1.15rem;
+ color: var(--text-muted);
+ font-size: 0.9rem;
+ }
+ .broker-search-panel {
+ background: var(--off-white);
+ border: 1px solid var(--line);
+ border-radius: 8px;
+ padding: 2.2rem 1.8rem;
+ margin-top: 1.5rem;
+ }
+ </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<div class="breadcrumb"><a href="../index.html">Home</a><span>›</span> Broker Reviews</div>
+
+<div class="page-hero" style="text-align:center;max-width:720px;">
+ <div class="hero-badge">Case Library</div>
+ <h1>Broker Reviews</h1>
+ <p>Search by company or platform name to open a complaint review. Reviews are not listed publicly, enter the name you already know.</p>
+</div>
+
+<section style="padding-top:0;max-width:720px;margin:0 auto;">
+ <div class="broker-search-panel">
+ <div class="broker-search-wrap">
+ <label class="broker-search-label" for="broker-search">Company / broker name</label>
+ <input
+ id="broker-search"
+ class="broker-search-input"
+ type="search"
+ autocomplete="off"
+ spellcheck="false"
+ placeholder="Start typing a company name…"
+ aria-autocomplete="list"
+ aria-controls="broker-results"
+ aria-expanded="false"
+ >
+ <ul id="broker-results" class="broker-results" role="listbox" aria-label="Matching reviews"></ul>
+ <p class="broker-search-hint" id="broker-hint">Type at least 3 characters. Results appear only when they match a name in our case library.</p>
+ </div>
+ </div>
+
+ <p style="text-align:center;margin-top:2.5rem;color:var(--text-2);font-size:0.92rem;line-height:1.7;">
+ Cannot find a platform, or need counsel on a dispute?
+ <a href="../pages/contact.html" style="color:var(--sage-dark);font-weight:600;">Book a consultation</a>
+ </p>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="../js/config.js"></script>
+<script src="../js/layout.js"></script>
+<script src="../js/brokers.js"></script>
+<script>
+(function () {
+ const MIN = 3;
+ const input = document.getElementById('broker-search');
+ const list = document.getElementById('broker-results');
+ const hint = document.getElementById('broker-hint');
+ const brokers = Array.isArray(window.ACT_HERE_BROKERS) ? window.ACT_HERE_BROKERS : [];
+
+ function norm(s) {
+ return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+ }
+
+ function score(entry, q) {
+ const name = norm(entry.name);
+ const file = norm(entry.file.replace(/-review\.html$/i, '').replace(/\.html$/i, ''));
+ const aliases = (entry.aliases || []).map(norm);
+ if (name === q || file === q) return 100;
+ if (name.startsWith(q) || file.startsWith(q)) return 80;
+ if (aliases.some(a => a === q || a.startsWith(q))) return 70;
+ if (name.includes(q) || file.includes(q)) return 50;
+ if (aliases.some(a => a.includes(q))) return 40;
+ return 0;
+ }
+
+ function render(matches, q) {
+ list.innerHTML = '';
+ if (!q || q.length < MIN) {
+ list.classList.remove('open');
+ input.setAttribute('aria-expanded', 'false');
+ hint.textContent = 'Type at least 3 characters. Results appear only when they match a name in our case library.';
+ return;
+ }
+ if (!matches.length) {
+ list.classList.add('open');
+ input.setAttribute('aria-expanded', 'true');
+ list.innerHTML = '<li class="broker-empty">No review matched “' + q.replace(/[<>&]/g, '') + '”. Check the spelling, or book a consultation.</li>';
+ hint.textContent = 'No public directory, only exact library matches are shown.';
+ return;
+ }
+ list.classList.add('open');
+ input.setAttribute('aria-expanded', 'true');
+ hint.textContent = matches.length + ' match' + (matches.length === 1 ? '' : 'es') + ', select a review to open.';
+ matches.slice(0, 12).forEach(entry => {
+ const li = document.createElement('li');
+ li.setAttribute('role', 'option');
+ const a = document.createElement('a');
+ a.href = entry.file;
+ a.textContent = entry.name + ' Review';
+ const sub = document.createElement('span');
+ sub.textContent = 'Open complaint review';
+ a.appendChild(sub);
+ li.appendChild(a);
+ list.appendChild(li);
+ });
+ }
+
+ function search() {
+ const q = norm(input.value);
+ if (q.length < MIN) {
+ render([], q);
+ return;
+ }
+ const ranked = brokers
+ .map(e => ({ e, s: score(e, q) }))
+ .filter(x => x.s > 0)
+ .sort((a, b) => b.s - a.s || a.e.name.localeCompare(b.e.name))
+ .map(x => x.e);
+ render(ranked, input.value.trim());
+ }
+
+ input.addEventListener('input', search);
+ input.addEventListener('focus', search);
+ document.addEventListener('click', (ev) => {
+ if (!ev.target.closest('.broker-search-wrap')) {
+ list.classList.remove('open');
+ input.setAttribute('aria-expanded', 'false');
+ }
+ });
+})();
+</script>
+</body>
+</html>

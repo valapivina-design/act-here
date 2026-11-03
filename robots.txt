@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://act-here.uk/sitemap.xml
+
+# Bing bot
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
+
+# Google bot
+User-agent: Googlebot
+Allow: /
