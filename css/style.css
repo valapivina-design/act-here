@@ -602,6 +602,132 @@ footer {
   border-radius: 8px; padding: 1.4rem 1.8rem;
 }
 
+/* Published review comments (composed threads + Act Here Support replies) */
+.reviews-block {
+  max-width: 760px;
+  margin: 2.5rem auto 1.5rem;
+  padding: 0 5%;
+}
+.reviews-head h2 {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  color: var(--navy);
+  margin: 0 0 .7rem;
+}
+.reviews-lead {
+  color: var(--text-2);
+  font-size: .95rem;
+  line-height: 1.7;
+  margin-bottom: 1.4rem;
+}
+.reviews-lead a { color: var(--sage-dark); font-weight: 600; }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 1.5rem;
+}
+.reviews-empty-soft {
+  color: var(--text-2);
+  font-size: .92rem;
+  padding: .4rem 0 1rem;
+}
+.review-card {
+  background: var(--off-white);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--sage);
+  border-radius: 6px;
+  padding: 1.25rem 1.4rem 1.1rem;
+}
+.review-card .review-meta {
+  font-size: .75rem;
+  color: var(--text-2);
+  margin-bottom: .55rem;
+}
+.review-card .review-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin: 0 0 .55rem;
+  line-height: 1.35;
+}
+.review-card .review-body {
+  font-size: .92rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0 0 .9rem;
+}
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  padding-top: .85rem;
+  border-top: 1px solid var(--line);
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .72rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.avatar.firm {
+  background: var(--sage-dark);
+  font-size: .65rem;
+  letter-spacing: .02em;
+}
+.review-author-text strong {
+  display: block;
+  font-size: .85rem;
+  color: var(--navy);
+}
+.review-author-text span {
+  font-size: .75rem;
+  color: var(--text-2);
+}
+.firm-reply {
+  margin-top: .9rem;
+  padding: .9rem 1rem .75rem;
+  background: rgba(152,175,159,0.12);
+  border-left: 2px solid var(--sage);
+  border-radius: 0 6px 6px 0;
+}
+.firm-reply-head {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin-bottom: .55rem;
+}
+.firm-reply-head strong {
+  display: block;
+  font-size: .85rem;
+  color: var(--navy);
+}
+.firm-reply-head span {
+  font-size: .68rem;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-weight: 700;
+}
+.firm-reply p {
+  font-size: .9rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin: 0 0 .65rem;
+}
+.firm-reply a {
+  color: var(--sage-dark);
+  font-size: .85rem;
+  font-weight: 700;
+}
+
 /* Review comment form (moderated, Formcarry) */
 .comment-form-block {
   max-width: 760px;

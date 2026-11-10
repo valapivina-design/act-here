@@ -206,8 +206,96 @@ document.addEventListener('DOMContentLoaded', () => {
  });
  });
 
- injectReviewCommentForm();
+ loadReviewCommentsThenInject();
 });
+
+/* Published comments + moderated Formcarry form on review pages. */
+function loadReviewCommentsThenInject() {
+ const path = window.location.pathname || '';
+ if (!/\/reviews\/.+-review\.html$/i.test(path)) return;
+
+ function go() {
+  injectPublishedComments();
+  injectReviewCommentForm();
+ }
+ if (window.ACT_HERE_COMMENTS) { go(); return; }
+ const existing = document.querySelector('script[data-act-here-comments]');
+ if (existing) {
+  existing.addEventListener('load', go);
+  existing.addEventListener('error', go);
+  return;
+ }
+ const s = document.createElement('script');
+ s.src = resolvePath('js/comments.js');
+ s.setAttribute('data-act-here-comments', '1');
+ s.onload = go;
+ s.onerror = go;
+ document.head.appendChild(s);
+}
+
+function formatCommentDate(iso) {
+ try {
+  const d = new Date(iso + 'T12:00:00');
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+ } catch (e) { return iso || ''; }
+}
+
+function injectPublishedComments() {
+ const path = window.location.pathname || '';
+ if (!/\/reviews\/.+-review\.html$/i.test(path)) return;
+ if (document.getElementById('reviews-grid')) return;
+
+ const file = path.split('/').pop() || '';
+ const slug = file.replace(/\.html$/i, '');
+ const h1 = document.querySelector('.page-hero h1, h1');
+ const company = (h1 ? h1.textContent : slug).replace(/\s*Review\s*$/i, '').trim() || slug;
+ const db = window.ACT_HERE_COMMENTS || {};
+ const items = db[slug] || [];
+ const consultHref = resolvePath('pages/contact.html');
+
+ const block = document.createElement('div');
+ block.className = 'reviews-block';
+ block.id = 'public-comments';
+
+ let cards = '';
+ if (!items.length) {
+  cards = '<p class="reviews-empty-soft">No public comments published for this profile yet.</p>';
+ } else {
+  for (let i = 0; i < items.length; i++) {
+   const c = items[i];
+   if ((c.name || '').toLowerCase().indexOf('trustpilot') !== -1) continue;
+   if ((c.title || '').toLowerCase().indexOf('trustpilot') !== -1) continue;
+   const lang = c.lang || 'en';
+   cards += '<article class="review-card" lang="' + escapeAttr(lang) + '">' +
+    '<div class="review-meta"><time datetime="' + escapeAttr(c.date || '') + '">' + escapeHtml(formatCommentDate(c.date)) + '</time></div>' +
+    '<h3 class="review-title">' + escapeHtml(c.title || '') + '</h3>' +
+    '<p class="review-body">' + escapeHtml(c.text || '') + '</p>' +
+    '<div class="review-author"><div class="avatar">' + escapeHtml(c.initials || '?') + '</div>' +
+    '<div class="review-author-text"><strong>' + escapeHtml(c.name || '') + '</strong><span>' + escapeHtml(c.country || '') + '</span></div></div>';
+   if (c.support) {
+    cards += '<div class="firm-reply" lang="' + escapeAttr(lang) + '">' +
+     '<div class="firm-reply-head"><div class="avatar firm">AH</div><div><strong>Act Here</strong><span>Support</span></div></div>' +
+     '<p>' + escapeHtml(c.support.text || '') + '</p>' +
+     '<a href="' + escapeAttr(consultHref) + '">' + escapeHtml(c.support.ctaLabel || 'Contact us for a consultation →') + '</a></div>';
+   }
+   cards += '</article>';
+  }
+ }
+
+ block.innerHTML =
+  '<div class="reviews-head">' +
+  '<h2>Reviews &amp; What People Are Saying</h2>' +
+  '<p class="reviews-lead">Comments from people describing problems with ' + escapeHtml(company) +
+  '. Our team may reply when the reported loss appears material and a confidential consultation could help. ' +
+  '<a href="#submit-for-review">Submit for review</a> — all new submissions are moderated before publishing.</p>' +
+  '</div><div class="reviews-grid" id="reviews-grid">' + cards + '</div>';
+
+ const cta = document.querySelector('section.cta-section');
+ const footer = document.querySelector('footer') || document.getElementById('footer-placeholder');
+ if (cta) cta.parentNode.insertBefore(block, cta);
+ else if (footer) footer.parentNode.insertBefore(block, footer);
+ else document.body.appendChild(block);
+}
 
 /* Moderated comment form on review pages (Formcarry vb0cjK_9y7T). */
 function injectReviewCommentForm() {
@@ -293,9 +381,12 @@ function injectReviewCommentForm() {
  <p class="comment-form-status" id="comment-form-status" role="status" aria-live="polite"></p>
  </form>`;
 
+ const published = document.getElementById('public-comments');
  const cta = document.querySelector('section.cta-section');
  const footer = document.querySelector('footer') || document.getElementById('footer-placeholder');
- if (cta) cta.parentNode.insertBefore(wrap, cta);
+ if (published && published.nextSibling) published.parentNode.insertBefore(wrap, published.nextSibling);
+ else if (published) published.parentNode.appendChild(wrap);
+ else if (cta) cta.parentNode.insertBefore(wrap, cta);
  else if (footer) footer.parentNode.insertBefore(wrap, footer);
  else document.body.appendChild(wrap);
 
