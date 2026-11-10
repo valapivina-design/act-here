@@ -205,4 +205,151 @@ document.addEventListener('DOMContentLoaded', () => {
  btn.style.opacity = '0.7';
  });
  });
+
+ injectReviewCommentForm();
 });
+
+/* Moderated comment form on review pages (Formcarry vb0cjK_9y7T). */
+function injectReviewCommentForm() {
+ const path = window.location.pathname || '';
+ if (!/\/reviews\/.+-review\.html$/i.test(path)) return;
+ if (document.getElementById('review-comment-form')) return;
+
+ const file = path.split('/').pop() || '';
+ const slug = file.replace(/\.html$/i, '');
+ const h1 = document.querySelector('.page-hero h1, h1');
+ const company = (h1 ? h1.textContent : slug).replace(/\s*Review\s*$/i, '').trim() || slug;
+ const privacyHref = resolvePath('pages/privacy-policy.html');
+
+ const wrap = document.createElement('section');
+ wrap.className = 'comment-form-block';
+ wrap.id = 'submit-for-review';
+ wrap.setAttribute('aria-labelledby', 'comment-form-heading');
+ wrap.innerHTML = `
+ <h2 id="comment-form-heading">Leave a comment</h2>
+ <p class="comment-form-lead">Share your experience with ${escapeHtml(company)}. <strong>All comments are moderated</strong> before anything is published. Email and phone are used only to follow up if needed and are <strong>never published</strong>.</p>
+ <form class="comment-form" id="review-comment-form" action="https://formcarry.com/s/vb0cjK_9y7T" method="POST" novalidate>
+ <input type="hidden" name="form_type" value="comment">
+ <input type="hidden" name="lead_source" value="act-here-review-comment">
+ <input type="hidden" name="company" id="comment-company" value="${escapeAttr(company)}">
+ <input type="hidden" name="slug" id="comment-slug" value="${escapeAttr(slug)}">
+ <input type="hidden" name="page_url" id="comment-page-url" value="">
+ <input type="hidden" name="_page" value="comment_${escapeAttr(slug)}">
+ <div class="hp" aria-hidden="true">
+ <label for="comment-gotcha">Leave blank</label>
+ <input type="text" id="comment-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+ </div>
+ <div class="field-row">
+ <div class="field">
+ <label for="comment-name">Name</label>
+ <input type="text" id="comment-name" name="name" required autocomplete="name" placeholder="Your name">
+ </div>
+ <div class="field">
+ <label for="comment-email">Email <span class="hint">(not published)</span></label>
+ <input type="email" id="comment-email" name="email" required autocomplete="email" placeholder="you@example.com">
+ </div>
+ </div>
+ <div class="field">
+ <label for="comment-phone">Phone <span class="hint">(not published)</span></label>
+ <div class="phone-row">
+ <select id="comment-country-code" name="country_code" required aria-label="Country code">
+ <option value="" selected disabled>Country code</option>
+ <option value="+44">+44 UK</option>
+ <option value="+1">+1 US/CA</option>
+ <option value="+61">+61 AU</option>
+ <option value="+353">+353 IE</option>
+ <option value="+49">+49 DE</option>
+ <option value="+33">+33 FR</option>
+ <option value="+31">+31 NL</option>
+ <option value="+34">+34 ES</option>
+ <option value="+39">+39 IT</option>
+ <option value="+48">+48 PL</option>
+ <option value="+90">+90 TR</option>
+ <option value="+971">+971 AE</option>
+ <option value="+65">+65 SG</option>
+ <option value="+91">+91 IN</option>
+ <option value="+27">+27 ZA</option>
+ <option value="+234">+234 NG</option>
+ <option value="+64">+64 NZ</option>
+ <option value="+46">+46 SE</option>
+ <option value="+47">+47 NO</option>
+ <option value="+41">+41 CH</option>
+ </select>
+ <input type="tel" id="comment-phone" name="phone" required autocomplete="tel-national" placeholder="Phone number">
+ </div>
+ </div>
+ <div class="field">
+ <label for="comment-subject">Subject</label>
+ <input type="text" id="comment-subject" name="subject" required maxlength="160" placeholder="Brief subject line">
+ </div>
+ <div class="field">
+ <label for="comment-body">Comment</label>
+ <textarea id="comment-body" name="comment" required maxlength="4000" placeholder="Describe what happened. Include the domain you used if you can."></textarea>
+ </div>
+ <div class="form-actions">
+ <p class="privacy-note">By submitting, you agree we may contact you about this report. We decide which comments go live after review. See our <a href="${privacyHref}">Privacy Policy</a>.</p>
+ <button type="submit" class="btn-primary" id="comment-submit">Submit comment</button>
+ </div>
+ <p class="comment-form-status" id="comment-form-status" role="status" aria-live="polite"></p>
+ </form>`;
+
+ const cta = document.querySelector('section.cta-section');
+ const footer = document.querySelector('footer') || document.getElementById('footer-placeholder');
+ if (cta) cta.parentNode.insertBefore(wrap, cta);
+ else if (footer) footer.parentNode.insertBefore(wrap, footer);
+ else document.body.appendChild(wrap);
+
+ const form = document.getElementById('review-comment-form');
+ const urlEl = document.getElementById('comment-page-url');
+ if (urlEl) urlEl.value = window.location.href;
+ if (!form) return;
+
+ const status = document.getElementById('comment-form-status');
+ const btn = document.getElementById('comment-submit');
+ const companyEl = document.getElementById('comment-company');
+ const slugEl = document.getElementById('comment-slug');
+ const companyName = companyEl ? companyEl.value : '';
+ const companySlug = slugEl ? slugEl.value : '';
+
+ form.addEventListener('submit', function (e) {
+ e.preventDefault();
+ if (status) { status.textContent = ''; status.className = 'comment-form-status'; }
+ if (!form.checkValidity()) { form.reportValidity(); return; }
+ if (btn) btn.disabled = true;
+ if (status) status.textContent = 'Sending…';
+ fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) })
+ .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }).catch(function () { return { ok: res.ok, data: {} }; }); })
+ .then(function (result) {
+ const data = result.data || {};
+ if (result.ok && (data.code === 200 || data.status === 'success' || !data.code)) {
+ if (status) {
+ status.className = 'comment-form-status ok';
+ status.textContent = 'Thank you. Your comment was received and will be moderated before it appears live.';
+ }
+ form.reset();
+ if (form.elements.form_type) form.elements.form_type.value = 'comment';
+ if (form.elements.lead_source) form.elements.lead_source.value = 'act-here-review-comment';
+ if (companyEl) companyEl.value = companyName;
+ if (slugEl) slugEl.value = companySlug;
+ if (urlEl) urlEl.value = window.location.href;
+ } else if (status) {
+ status.className = 'comment-form-status err';
+ status.textContent = (data && data.message) || 'We could not submit that comment. Please try again in a moment.';
+ }
+ })
+ .catch(function () {
+ if (status) {
+ status.className = 'comment-form-status err';
+ status.textContent = 'No response from the form service. Please try again or email hello@act-here.uk.';
+ }
+ })
+ .finally(function () { if (btn) btn.disabled = false; });
+ });
+}
+
+function escapeHtml(s) {
+ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escapeAttr(s) {
+ return escapeHtml(s).replace(/'/g,'&#39;');
+}
