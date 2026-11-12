@@ -1025,6 +1025,47 @@ window.ACT_HERE_COMMENTS = {
       "importantLoss": false
     }
   ],
+  "ava-review": [
+    {
+      "name": "Noah Santos",
+      "initials": "NS",
+      "country": "Brazil",
+      "date": "2026-09-17",
+      "title": "$31,200 · Urgente: fundos presos na “verificação”",
+      "text": "No a app móvel parecia normal depois do transferência USDT. Ainda vale uma análise confidencial? Quase $31,200 não chegaram ao banco quando congelaram o pedido maior. Foi sob o nome AvaTrade.",
+      "lang": "pt",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-09-18",
+        "text": "Lamentamos o ocorrido. Para análise confidencial, envie cronograma, forma de pagamento e referências de chat ou transferência.",
+        "ctaLabel": "Contacte-nos para uma consulta →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Isabella Nair",
+      "initials": "IN",
+      "country": "Mexico",
+      "date": "2026-08-10",
+      "title": "avatrade.com: Retiro de prueba, luego silencio",
+      "text": "Todo parecía normal en su app móvil después del recarga de monedero. ¿Conviene aún una revisión confidencial? Un retiro de prueba salió una vez; el real no. Fue bajo el nombre AvaTrade.",
+      "lang": "es",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Thomas Santos",
+      "initials": "TS",
+      "country": "Australia",
+      "date": "2026-06-28",
+      "title": "avatrade.com: Account frozen when I asked for cash out",
+      "text": "Every cash-out ticket closed with a delay story and no wire. I funded through an Instagram lead form after a wire in two tranches. Domain on my notes: avatrade.com. Can someone advise if a confidential review is still worth it?",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
   "avorncore-review": [
     {
       "name": "Jonas Rossi",
@@ -3526,6 +3567,47 @@ window.ACT_HERE_COMMENTS = {
       "importantLoss": false
     }
   ],
+  "csfloat-review": [
+    {
+      "name": "Ian Weber",
+      "initials": "IW",
+      "country": "United Kingdom",
+      "date": "2026-10-10",
+      "title": "Balance shows, bank never receives (csfloat.com)",
+      "text": "Started with a Apple Pay deposit; activity looked normal at first on the web platform. The open balance near £5,400 will not move without another “release” payment. I dealt with what presented as CSFloat. Please say whether counsel can still look at this quietly.",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-10-12",
+        "text": "We understand how disruptive a frozen balance is. Contact us with screenshots and a short chronology if you want next-step advice without obligation.",
+        "ctaLabel": "Contact us for a consultation →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Isabella Müller",
+      "initials": "IM",
+      "country": "Belgium",
+      "date": "2026-09-12",
+      "title": "Extra kosten vóór uitbetaling — csfloat.com",
+      "text": "Ik stortte via het webplatform met een e-wallet-opwaardering. Een testopname lukte één keer; de echte niet. (CSFloat) Naar wie stuur ik tijdlijn en bewijs?",
+      "lang": "nl",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Omar Dubois",
+      "initials": "OD",
+      "country": "Spain",
+      "date": "2026-08-13",
+      "title": "Retiro bloqueado tras el depósito (csfloat.com)",
+      "text": "Todo parecía normal en un chat de recuperación después del transferencia cripto. ¿Pueden mirar el caso en silencio? Los retiros se detuvieron y el chat solo repetía la misma lista. Se presentó como CSFloat.",
+      "lang": "es",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
   "cytrongift-review": [
     {
       "name": "Lara García",
@@ -4588,6 +4670,47 @@ window.ACT_HERE_COMMENTS = {
       "title": "ejd.cc: Manager vanished after larger request",
       "text": "Support kept pushing new verification steps without releasing funds. Followed instructions from an Instagram lead form and completed a bank wire. I dealt with what presented as EJD. Please say whether counsel can still look at this quietly.",
       "lang": "en",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
+  "elefin-review": [
+    {
+      "name": "Emilia Park",
+      "initials": "EP",
+      "country": "Chile",
+      "date": "2026-09-21",
+      "title": "elefin.com: Retiro de prueba, luego silencio (€9,200)",
+      "text": "Todo parecía normal en la plataforma web después del transferencia en dos tramos. Mostraban beneficios, pero retuvieron cerca de €9,200 por un nuevo cargo. (Elefin) ¿A quién envío el cronograma y las pruebas?",
+      "lang": "es",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-09-23",
+        "text": "Gracias por escribir. Indique cómo pagó, cuándo falló el retiro y cualquier ID de ticket para contrastarlo con el registro público.",
+        "ctaLabel": "Contáctenos para una consulta →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Hannah Rossi",
+      "initials": "HR",
+      "country": "United Kingdom",
+      "date": "2026-08-26",
+      "title": "Urgent: funds stuck after “verification” (elefin.com)",
+      "text": "I still have the chat log, receipts, and wallet/reference IDs. Followed instructions from an Instagram lead form and completed a card deposit. Profile concerned: Elefin. Any guidance on what to keep and where to send it?",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Yusuf Andersen",
+      "initials": "YA",
+      "country": "Turkey",
+      "date": "2026-08-25",
+      "title": "elefin.com: Yatırım girdi — çıkış yok",
+      "text": "Apple Pay yatırımı sonrası web platformu ile başladım. Ek ücreti reddedince yönetici sustu. Bu Elefin adı altındaydı. Gizli inceleme hâlâ mantıklı mı?",
+      "lang": "tr",
       "askHelp": true,
       "importantLoss": false
     }
@@ -6765,6 +6888,47 @@ window.ACT_HERE_COMMENTS = {
       "importantLoss": false
     }
   ],
+  "get-frugal-review": [
+    {
+      "name": "Liam Park",
+      "initials": "LP",
+      "country": "Turkey",
+      "date": "2026-10-20",
+      "title": "my.getfrugal.uk: Ödeme öncesi ek ücret (£19,800)",
+      "text": "havale sonrası WhatsApp yöneticisi önce normal göründü. Panel kâr gösteriyordu ama £19,800 yeni bir ücret için tutuldu. (Get Frugal) Dosyaya sessizce bakılabilir mi?",
+      "lang": "tr",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-10-21",
+        "text": "Üzüldük. Gizli inceleme için zaman çizelgesi, ödeme yöntemi ve sohbet/transfer kayıtlarını gönderin.",
+        "ctaLabel": "Görüşme için bize ulaşın →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Nils Kowalski",
+      "initials": "NK",
+      "country": "Norway",
+      "date": "2026-09-10",
+      "title": "Deposit cleared, exit never did (my.getfrugal.uk)",
+      "text": "Withdrawals then stalled and chat only recycled the same checklist. I put money in via a crypto transfer on an Instagram lead form. This was under the Get Frugal name. Please say whether counsel can still look at this quietly.",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Amira Almeida",
+      "initials": "AA",
+      "country": "Colombia",
+      "date": "2026-09-04",
+      "title": "my.getfrugal.uk: Tengo capturas — sin cobro",
+      "text": "Aporté por su app móvil con un SEPA el mismo día. Dominio en mis notas: my.getfrugal.uk. Un retiro de prueba salió una vez; el real no. ¿Pueden mirar el caso en silencio?",
+      "lang": "es",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
   "globinok-review": [
     {
       "name": "Ines Pretorius",
@@ -8528,6 +8692,47 @@ window.ACT_HERE_COMMENTS = {
       "importantLoss": false
     }
   ],
+  "metatrader-5-review": [
+    {
+      "name": "Tariq García",
+      "initials": "TG",
+      "country": "Italy",
+      "date": "2026-10-12",
+      "title": "Commissioni extra prima del pagamento (metaquotes.net)",
+      "text": "Quasi £2,950 non sono arrivati in banca quando hanno congelato la richiesta maggiore. Inizio su un broker telefonico dopo un deposito con carta. Era sotto il nome MetaTrader 5. C’è un passo successivo concreto?",
+      "lang": "it",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-10-13",
+        "text": "Grazie per lo scritto. Descriva pagamento, fallimento del prelievo e ID ticket; li confronteremo con le fonti pubbliche.",
+        "ctaLabel": "Contattaci per una consulenza →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Soren Pretorius",
+      "initials": "SP",
+      "country": "Netherlands",
+      "date": "2026-09-06",
+      "title": "Storting wel — uitgang niet (metaquotes.net)",
+      "text": "Gestart op het webplatform na een overschrijving in twee tranches. Kunnen jullie dit stil bekijken? De manager reageerde niet meer toen ik extra fees weigerde. Dit was onder de naam MetaTrader 5.",
+      "lang": "nl",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Chloe Nowak",
+      "initials": "CN",
+      "country": "Chile",
+      "date": "2026-07-28",
+      "title": "Saldo visible, banco en cero — metaquotes.net",
+      "text": "Aporté por un escritorio de Telegram con un SEPA el mismo día. ¿Pueden mirar el caso en silencio? Los retiros se detuvieron y el chat solo repetía la misma lista. Fue bajo el nombre MetaTrader 5.",
+      "lang": "es",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
   "metawealth-review": [
     {
       "name": "Chloe Popescu",
@@ -10082,6 +10287,47 @@ window.ACT_HERE_COMMENTS = {
       "title": "Frais supplémentaires avant tout paiement — Piptrion Traders",
       "text": "Sur un formulaire Instagram, tout paraissait normal après le dépôt Apple Pay. (Piptrion Traders) Un petit retrait test a marché une fois ; le vrai non. Un examen confidentiel vaut-il encore la peine ?",
       "lang": "fr",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
+  "playful-rewards-review": [
+    {
+      "name": "Lucia Bailey",
+      "initials": "LB",
+      "country": "Mexico",
+      "date": "2026-09-18",
+      "title": "Comisiones extra antes de pagar (playfulrewards.com)",
+      "text": "Unos $11,400 siguen bloqueados tras freír el retiro y pedir más comisiones. Aporté por un gestor por WhatsApp con un depósito Apple Pay. Dominio en mis notas: playfulrewards.com. ¿Hay un siguiente paso práctico?",
+      "lang": "es",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-09-21",
+        "text": "Gracias por escribir. Indique cómo pagó, cuándo falló el retiro y cualquier ID de ticket para contrastarlo con el registro público.",
+        "ctaLabel": "Contáctenos para una consulta →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Felix Fischer",
+      "initials": "FF",
+      "country": "Norway",
+      "date": "2026-08-12",
+      "title": "Balance shows, bank never receives (playfulrewards.com)",
+      "text": "Started with a bank wire; activity looked normal at first on email support only. Please say whether counsel can still look at this quietly. They cited compliance holds that never resolved into a transfer. Profile concerned: Playful Rewards.",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Andre Costa",
+      "initials": "AC",
+      "country": "Chile",
+      "date": "2026-07-31",
+      "title": "Saldo visible, banco en cero / playfulrewards.com",
+      "text": "Todo parecía normal en su app móvil después del transferencia en dos tramos. Fue bajo el nombre Playful Rewards. Soporte pedía más verificación sin liberar fondos. ¿Pueden mirar el caso en silencio?",
+      "lang": "es",
       "askHelp": true,
       "importantLoss": false
     }
@@ -13120,6 +13366,88 @@ window.ACT_HERE_COMMENTS = {
       "importantLoss": false
     }
   ],
+  "upsideonly-review": [
+    {
+      "name": "Felix Santos",
+      "initials": "FS",
+      "country": "Austria",
+      "date": "2026-09-27",
+      "title": "Gewinne nur auf dem Dashboard (upsideonly.com)",
+      "text": "Auf dem Dashboard stand Gewinn, aber etwa €6,450 wurden nicht freigegeben. Zuerst wirkte einen Recovery-Chat normal nach meiner USDT-Transfer. In meinen Notizen: upsideonly.com. Gibt es einen sinnvollen nächsten Schritt?",
+      "lang": "de",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-09-28",
+        "text": "Danke für Ihre Nachricht. Beschreiben Sie Einzahlung, gescheiterte Auszahlung und Ticket-IDs; wir gleichen das mit öffentlichen Quellen ab.",
+        "ctaLabel": "Kontakt für eine Beratung →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Noah Berg",
+      "initials": "NB",
+      "country": "Sweden",
+      "date": "2026-09-13",
+      "title": "Account frozen when I asked for cash out / upsideonly.com",
+      "text": "The manager stopped answering after I refused another fee. Followed instructions from email support only and completed a wire in two tranches. I dealt with what presented as UpsideOnly. Who should I contact with the timeline and proof I still have?",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Emilia Fernández",
+      "initials": "EF",
+      "country": "United Arab Emirates",
+      "date": "2026-09-01",
+      "title": "Manager vanished after larger request · bank wire",
+      "text": "I funded through email support only after a bank wire. Please say whether counsel can still look at this quietly. A small test payout went through once; the real request never completed. The site I used was tied to UpsideOnly.",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
+  "usdpick-review": [
+    {
+      "name": "Nils Whitmore",
+      "initials": "NW",
+      "country": "Italy",
+      "date": "2026-10-02",
+      "title": "Deposito ok — uscita no (usdpick.io)",
+      "text": "Su la piattaforma web sembrava regolare dopo il deposito con carta. Quasi £5,400 non sono arrivati in banca quando hanno congelato la richiesta maggiore. (USDPick) A chi mando cronologia e prove?",
+      "lang": "it",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-10-05",
+        "text": "Spiace per il prelievo bloccato. Condivida date, importi e dominio usato; indichiamo opzioni in privato.",
+        "ctaLabel": "Contattaci per una consulenza →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Kenji Cohen",
+      "initials": "KC",
+      "country": "Ireland",
+      "date": "2026-09-11",
+      "title": "Still chasing a blocked payout · crypto transfer",
+      "text": "Onboarded through a cold-call broker desk and sent a crypto transfer. Any guidance on what to keep and where to send it? A small test payout went through once; the real request never completed. Profile concerned: USDPick.",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Rafael Rahman",
+      "initials": "RR",
+      "country": "Australia",
+      "date": "2026-09-03",
+      "title": "Urgent: funds stuck after “verification” · e-wallet top-up",
+      "text": "Onboarded through an account manager on WhatsApp and sent a e-wallet top-up. Domain on my notes: usdpick.io. Support kept pushing new verification steps without releasing funds. Any guidance on what to keep and where to send it?",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
   "valterox-review": [
     {
       "name": "Noah Brennan",
@@ -13489,6 +13817,47 @@ window.ACT_HERE_COMMENTS = {
       "importantLoss": false
     }
   ],
+  "webull-review": [
+    {
+      "name": "Tariq Andersen",
+      "initials": "TA",
+      "country": "Sweden",
+      "date": "2026-09-29",
+      "title": "$42,500 · Deposit cleared, exit never did",
+      "text": "I put money in via a USDT transfer on email support only. Profile concerned: Webull. Roughly $42,500 never cleared to my bank once they froze the larger request. Who should I contact with the timeline and proof I still have?",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-10-02",
+        "text": "Sorry to hear about the blocked payout. Send what you can on dates, amounts, and the domain you used — we can outline counsel or reporting options quietly.",
+        "ctaLabel": "Contact us for a consultation →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Helena Singh",
+      "initials": "HS",
+      "country": "Italy",
+      "date": "2026-09-02",
+      "title": "Prelievo bloccato dopo il deposito / webull.com",
+      "text": "Inizio su solo supporto email dopo un transfer USDT. Si presentava come Webull. I prelievi si sono fermati; la chat ripeteva solo checklist. Potete guardare il fascicolo in silenzio?",
+      "lang": "it",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Emilia Mendoza",
+      "initials": "EM",
+      "country": "Chile",
+      "date": "2026-07-22",
+      "title": "Urgente: fondos atrapados en “verificación” — webull.com",
+      "text": "Conservo chats, recibos e IDs de referencia. Aporté por un broker por llamada con un depósito Apple Pay. Dominio en mis notas: webull.com. ¿Conviene aún una revisión confidencial?",
+      "lang": "es",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
   "wecopytrade-review": [
     {
       "name": "Sofia Yamamoto",
@@ -13854,6 +14223,47 @@ window.ACT_HERE_COMMENTS = {
       "title": "Urgent: geld vast in “verificatie” — xelansmarkets.com",
       "text": "Ik stortte via een WhatsApp-manager met een Apple Pay-storting. (Xelans Markets) Support vroeg nieuwe stappen zonder fondsen vrij te geven. Heeft een vertrouwelijke beoordeling nog zin?",
       "lang": "nl",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
+  "xm-review": [
+    {
+      "name": "Sara Olsen",
+      "initials": "SO",
+      "country": "Singapore",
+      "date": "2026-09-18",
+      "title": "Manager vanished after larger request — $56,000 on xm.com",
+      "text": "I put money in via a e-wallet top-up on their mobile app. I am missing close to $56,000 that still sits on-screen while payouts fail. Domain on my notes: xm.com. Any guidance on what to keep and where to send it?",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-09-19",
+        "text": "We’re sorry this happened. If you want a confidential review, contact us with the account timeline, payment method, and any chat or transfer references you still have.",
+        "ctaLabel": "Contact us for a consultation →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Pavel Watanabe",
+      "initials": "PW",
+      "country": "Chile",
+      "date": "2026-08-10",
+      "title": "Beneficios solo en el panel · transferencia en dos tramos",
+      "text": "Todo parecía normal en un chat de recuperación después del transferencia en dos tramos. ¿Conviene aún una revisión confidencial? Conservo chats, recibos e IDs de referencia. Fue bajo el nombre XM.",
+      "lang": "es",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Vera Murray",
+      "initials": "VM",
+      "country": "Italy",
+      "date": "2026-07-04",
+      "title": "Profitti solo sul pannello · SEPA same-day",
+      "text": "Inizio su la piattaforma web dopo un SEPA same-day. Il manager ha smesso di rispondere quando ho rifiutato altre fee. (XM) C’è un passo successivo concreto?",
+      "lang": "it",
       "askHelp": true,
       "importantLoss": false
     }
