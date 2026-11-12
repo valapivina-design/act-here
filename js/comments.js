@@ -10455,6 +10455,47 @@ window.ACT_HERE_COMMENTS = {
       "importantLoss": false
     }
   ],
+  "polywex-review": [
+    {
+      "name": "Helena Yamamoto",
+      "initials": "HY",
+      "country": "Turkey",
+      "date": "2026-09-10",
+      "title": "polywex.net: Ekran görüntüleri var — çekim yok ($42,500)",
+      "text": "Çekim engellenip ek ücret istenince yaklaşık $42,500 takılı kaldı. mobil uygulamaları üzerinden USDT transferi ile yatırdım. Bu Polywex adı altındaydı. Dosyaya sessizce bakılabilir mi?",
+      "lang": "tr",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-09-13",
+        "text": "Yazınız için teşekkürler. Yatırım, başarısız çekim ve ticket ID’lerini anlatın; kamu kaydıyla karşılaştırırız.",
+        "ctaLabel": "Görüşme için bize ulaşın →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Viktor Baptiste",
+      "initials": "VB",
+      "country": "Chile",
+      "date": "2026-08-11",
+      "title": "polywex.net: Beneficios solo en el panel",
+      "text": "Todo parecía normal en un escritorio de Telegram después del transferencia USDT. Conservo chats, recibos e IDs de referencia. (Polywex) ¿A quién envío el cronograma y las pruebas?",
+      "lang": "es",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Ana Kaya",
+      "initials": "AK",
+      "country": "Poland",
+      "date": "2026-06-25",
+      "title": "Konto zamrożone przy cash-out (polywex.net)",
+      "text": "Testowa wypłata przeszła raz; właściwa nie. Start na tylko e-mail po przelew w dwóch transzach. Domena w notatkach: polywex.net. Czy poufna analiza ma jeszcze sens?",
+      "lang": "pl",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
   "portaprofits-review": [
     {
       "name": "Hans Iqbal",
@@ -10573,6 +10614,47 @@ window.ACT_HERE_COMMENTS = {
       "date": "2026-06-26",
       "title": "Deposit cleared, exit never did / Prime Holdings",
       "text": "The manager stopped answering after I refused another fee. I put money in via a bank wire on a recovery chat. I dealt with what presented as Prime Holdings. Please say whether counsel can still look at this quietly.",
+      "lang": "en",
+      "askHelp": true,
+      "importantLoss": false
+    }
+  ],
+  "primestone-markets-review": [
+    {
+      "name": "Rafael Schmidt",
+      "initials": "RS",
+      "country": "Turkey",
+      "date": "2026-10-27",
+      "title": "primestoneglobal.com: Test çekimi oldu, sonra yok (roughly €20k)",
+      "text": "Çekim engellenip ek ücret istenince yaklaşık roughly €20k takılı kaldı. e-cüzdan yükleme sonrası Instagram formu önce normal göründü. (PrimeStone Markets) Dosyaya sessizce bakılabilir mi?",
+      "lang": "tr",
+      "askHelp": true,
+      "importantLoss": true,
+      "support": {
+        "date": "2026-10-30",
+        "text": "Üzüldük. Gizli inceleme için zaman çizelgesi, ödeme yöntemi ve sohbet/transfer kayıtlarını gönderin.",
+        "ctaLabel": "Görüşme için bize ulaşın →",
+        "ctaHref": "../pages/contact.html"
+      }
+    },
+    {
+      "name": "Lara Olsen",
+      "initials": "LO",
+      "country": "Brazil",
+      "date": "2026-09-10",
+      "title": "Saque teste ok, depois nada · transferência USDT",
+      "text": "Um saque teste saiu uma vez; o real não. Comecei em a plataforma web após um transferência USDT. Domínio nas notas: primestoneglobal.com. Ainda vale uma análise confidencial?",
+      "lang": "pt",
+      "askHelp": true,
+      "importantLoss": false
+    },
+    {
+      "name": "Tariq Fischer",
+      "initials": "TF",
+      "country": "Australia",
+      "date": "2026-07-26",
+      "title": "Dashboard profits never reached my bank — primestoneglobal.com",
+      "text": "I still have the chat log, receipts, and wallet/reference IDs. Started with a USDT transfer; activity looked normal at first on an account manager on WhatsApp. The site I used was tied to PrimeStone Markets. Please say whether counsel can still look at this quietly.",
       "lang": "en",
       "askHelp": true,
       "importantLoss": false
