@@ -51,8 +51,7 @@ const ACT_HERE_CONFIG = {
  enabled: true,
  propertyId: "69f27ae03ff7931c332265b1",
  widgetId: "default",
- // JS / REST API key (Administration → Overview → API Key). Used for secure visitor hash / API calls; not the embed widget id.
- apiKey: "5ee0aa26ae8dc2e304ad92ea33bf12fc2ba55874",
+ // Do NOT put the Tawk API key in this public file (visible in browser). Keep it in tools/tawk_api_key.txt (gitignored) for server-side / secure-mode hashing only.
 
  // Pages where chat should be HIDDEN (e.g. blog pages where it's distracting)
  // Use partial path matches

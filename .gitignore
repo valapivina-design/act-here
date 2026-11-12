@@ -11,3 +11,4 @@ readme.*
 credentials.json
 .cursor/
 node_modules/
+tools/tawk_api_key.txt
