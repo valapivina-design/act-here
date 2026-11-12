@@ -49,8 +49,8 @@ const ACT_HERE_CONFIG = {
  */
  tawkto: {
  enabled: true,
- propertyId: "69f27ae03ff7931c332265b1",
- widgetId: "default",
+ propertyId: "6af5f7502cfd7b3c44af9e80",
+ widgetId: "1k78cs4ql",
  // Do NOT put the Tawk API key in this public file (visible in browser). Keep it in tools/tawk_api_key.txt (gitignored) for server-side / secure-mode hashing only.
 
  // Pages where chat should be HIDDEN (e.g. blog pages where it's distracting)
