@@ -48,9 +48,9 @@ const ACT_HERE_CONFIG = {
  5. Set enabled: true
  */
  tawkto: {
- enabled: false, // ← set to true once you add your IDs
- propertyId: "YOUR_TAWKTO_PROPERTY_ID", // ← e.g. "64abc123def456"
- widgetId: "YOUR_TAWKTO_WIDGET_ID", // ← e.g. "1hxyz7890" (usually "default" or a hash)
+ enabled: true,
+ propertyId: "69f27ae03ff7931c332265b1",
+ widgetId: "default",
 
  // Pages where chat should be HIDDEN (e.g. blog pages where it's distracting)
  // Use partial path matches
