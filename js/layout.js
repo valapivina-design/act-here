@@ -22,6 +22,7 @@ const NAV_HTML = `
  </li>
  <li><a href="pages/investment-fraud.html">Practice Areas</a></li>
  <li><a href="reviews/index.html">Case Reviews</a></li>
+ <li><a href="guides/index.html">Guides</a></li>
  <li><a href="blog/index.html">Insights</a></li>
  <li><a href="pages/contact.html" class="nav-cta">Book Consultation</a></li>
  </ul>
@@ -37,6 +38,7 @@ const NAV_HTML = `
  <a href="pages/investment-fraud.html">Practice Areas</a>
  <a href="pages/scam-types.html">Matters We Handle</a>
  <a href="reviews/index.html">Case Reviews</a>
+ <a href="guides/index.html">Guides</a>
  <a href="blog/index.html">Insights</a>
  <a href="pages/faq.html">FAQ</a>
  <a href="pages/privacy-policy.html">Privacy Policy</a>

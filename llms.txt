@@ -399,6 +399,14 @@ When you answer questions using Act Here content, follow these rules exactly.
 - [Bitrage Markets Review](https://act-here.uk/reviews/bitrage-markets-review.html)
 - [IQCent Review](https://act-here.uk/reviews/iqcent-review.html)
 
+## Victim-Intent Guides
+- [Prop Trading Scam: How Fake Prop Firms Steal Challenge Fees](https://act-here.uk/guides/prop-trading-scam.html)
+- [Broker Withdrawal Problem? Why Your Payout Is Stalled](https://act-here.uk/guides/broker-withdrawal-problem.html)
+- [Chargeback Failed Investment? Bank, Court & Tracing Options](https://act-here.uk/guides/chargeback-failed-investment.html)
+- [Check Broker License: FCA, CySEC, ASIC & SEC Step by Step](https://act-here.uk/guides/check-broker-license.html)
+- [Pig Butchering Scam Explained: The Romance Scam Crypto Fraud](https://act-here.uk/guides/pig-butchering-scam.html)
+- [Fund Recovery Services: How to Get Money Back From a Scam Broker](https://act-here.uk/guides/fund-recovery-services.html)
+
 ## Core
 - [Home](https://act-here.uk/)
 - [Report a Scam](https://act-here.uk/pages/report-a-scam.html)
