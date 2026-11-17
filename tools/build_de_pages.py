@@ -36,6 +36,7 @@ PAGES = [
             ("Krypto Anwalt in Ihrer Stadt", "Deutschlandweit tätig: München, Berlin, Köln, Hamburg, Frankfurt und mehr", [
                 ("p", "Betroffene suchen häufig einen Krypto Anwalt in München, Berlin, Köln, Hamburg, Frankfurt am Main, Stuttgart oder Düsseldorf – also einen Anwalt in der Nähe. Krypto-Betrug ist jedoch ein grenzüberschreitendes Delikt: Die Täter sitzen im Ausland, die Beweise liegen auf der Blockchain, und die entscheidenden Schritte (Tracing, Auskunftsersuchen an Börsen, Rückbuchungen) erfolgen digital. Act Here betreut Mandate deutschlandweit und international – unabhängig von Ihrem Wohnort."),
                 ("p", "Wichtiger als die Postleitzahl ist die Spezialisierung: Fragen Sie jeden Anwalt, ob er bereits Blockchain-Tracing in gerichtsverwertbarer Form erstellt und mit Krypto-Börsen zusammengearbeitet hat."),
+                ("p", "Betroffene, die einen Krypto Scam melden oder Krypto-Betrug erkennen wollen, finden die Schritt-für-Schritt-Anleitung in unserem Ratgeber zu <a href=\"krypto-betrug.html\">Krypto-Betrug</a> – dort erklären wir auch, wie Sie Krypto-Betrug-Geld-zurück-Ansprüche sichern und welche Krypto-Betrug-Hilfe realistisch ist. Wer nach einem Krypto Scam Anwalt sucht, sollte denselben Maßstab anlegen: Tracing-Kompetenz statt Versprechen."),
             ]),
             ("Erste Schritte", "Was Sie sofort tun sollten – bevor Spuren verwischen", [
                 ("ul", [
