@@ -95,6 +95,7 @@ const FOOTER_HTML = `
  <li><a href="pages/disclaimer.html">Disclaimer</a></li>
         <li><a href="de/index.html">Deutsch</a></li>
         <li><a href="it/index.html">Italiano</a></li>
+        <li><a href="es/index.html">Español</a></li>
         <li><a href="de/krypto-betrug.html">Krypto-Betrug</a></li>
         <li><a href="de/broker-betrug.html">Broker Betrug</a></li>
       </ul>
