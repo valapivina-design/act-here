@@ -48,7 +48,7 @@ PAGES = [
             ]),
         ],
         "faqs": [
-            ("Was kostet ein Krypto Anwalt?", "Die Ersteinschätzung Ihres Falls ist bei Act Here kostenlos und unverbindlich. Sie dient dazu, Ihren Anspruch zu prüfen: was passiert ist, welche Beweise vorliegen und welche Wege realistisch sind. Alles Weitere wird vor Beginn schriftlich mit Ihnen vereinbart."),
+            ("Was kostet ein Krypto Anwalt?", "Die Ersteinschätzung Ihres Falls ist bei Act Here kostenlos. Wir müssen Ihren Anspruch zunächst prüfen und seine Erfolgsaussichten und Durchsetzbarkeit einschätzen. Das hängt von der Beweislage ab."),
             ("Kann ein Anwalt mein Geld bei Krypto-Betrug zurückholen?", "Teilweise – und ehrlicherweise nicht immer. Die besten Chancen bestehen bei Kartenzahlungen und Banküberweisungen innerhalb der Rückbuchungsfristen sowie bei Krypto-Zahlungen, die zu einer regulierten Börse geführt haben. Kein seriöser Anwalt garantiert eine Rückzahlung. Wir sagen Ihnen nach der kostenlosen Ersteinschätzung, welche Wege in Ihrem Fall realistisch sind."),
             ("Lohnt sich ein Anwalt auch bei kleineren Beträgen?", "Ab etwa 1.000 Euro Schaden ist eine professionelle Einschätzung sinnvoll, schon wegen der Rückbuchungsfristen bei Banken. Bei fünfstelligen Beträgen ist anwaltliche Vertretung fast immer wirtschaftlich sinnvoll. Bei sehr kleinen Beträgen kann die Strafanzeige plus Rückbuchung über die eigene Bank ausreichen."),
             ("Strafanzeige oder Anwalt – was ist besser?", "Beides, aber mit unterschiedlichem Ziel: Die Strafanzeige richtet sich gegen die Täter und kostet nichts, führt aber selten zur Rückzahlung. Der Anwalt verfolgt Ihr Geld: Rückbuchung, Tracing, zivilrechtliche Ansprüche. Wer sein Geld zurückwill, braucht die zivilrechtliche Spur."),
@@ -193,7 +193,7 @@ PAGES = [
             ("Die Bank lehnt meine Rückbuchung ab – was nun?", "Eine Ablehnung der Bank ist nicht das Ende: Sie betrifft nur den bankinternen Weg. Zivilrechtliche Ansprüche gegen die Empfänger bleiben bestehen, ebenso die forensische Verfolgung der Zahlungsströme. Gerade nach abgelehnten Chargebacks lohnt eine professionelle Prüfung der Ablehnungsgründe – sie sind nicht immer zutreffend."),
             ("Gilt das auch bei Phishing und Online-Banking-Betrug?", "Ja, sogar mit guter Rechtslage: Bei nicht autorisierten Zahlungsvorgängen trägt nach §§ 675u ff. BGB grundsätzlich die Bank das Risiko – Sie müssen sich allenfalls grobe Fahrlässigkeit vorhalten lassen. Melden Sie den Vorgang sofort, lassen Sie die Konten sperren und verlangen Sie schriftlich die Erstattung."),
             ("Wie lange habe ich Zeit, den Betrug zu melden?", "Für die Strafanzeige gibt es keine Frist (Verjährung des Betrugs: meist 5 Jahre). Kritisch sind die Bankfristen: Chargeback ca. 120 Tage, Lastschriftwiderruf 8 Wochen, Überweisungsrückruf wenige Tage. Zivilansprüche verjähren in der Regel nach 3 Jahren ab Kenntnis."),
-            ("Was kostet die Hilfe durch Act Here?", "Die Ersteinschätzung Ihres Falls ist kostenlos und unverbindlich. Sie dient dazu, Ihren Anspruch zu prüfen: was passiert ist, welche Beweise vorliegen und welche Wege realistisch sind. Alles Weitere wird vor Beginn schriftlich mit Ihnen vereinbart."),
+            ("Was kostet die Hilfe durch Act Here?", "Die Ersteinschätzung Ihres Falls ist kostenlos. Wir müssen Ihren Anspruch zunächst prüfen und seine Erfolgsaussichten und Durchsetzbarkeit einschätzen. Das hängt von der Beweislage ab."),
         ],
     },
 ]

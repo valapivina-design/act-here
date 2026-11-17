@@ -158,7 +158,7 @@ PAGES = [
    ("Truffa trading online reato: quale norma si applica?", "Di regola l'art. 640 c.p. (truffa), a cui possono aggiungersi l'abusivismo finanziario e altri reati. La querela va presentata entro tre mesi dalla notizia del fatto."),
    ("Truffa trading recuperare soldi: è possibile?", "In parte, e dipende da metodo di pagamento e tempi. Carta e bonifico offrono le possibilità migliori se agisci subito. Nessun esito è garantito."),
    ("Esiste una lista di broker truffa?", "La fonte ufficiale è l'elenco CONSOB dei siti oscurati, insieme agli avvisi ai risparmiatori. Un broker truffa può però non comparire ancora: l'assenza dalla lista non è una garanzia."),
-   ("Il broker ha sede all'estero: cambia qualcosa?", "Sì. Cambiano autorità competente, giurisdizione e costi. È uno dei primi punti da chiarire in una valutazione del caso."),
+   ("Il broker ha sede all'estero: cambia qualcosa?", "Sì. Cambiano autorità competente e giurisdizione. È uno dei primi punti da chiarire in una valutazione del caso."),
   ],
  },
  {
@@ -228,8 +228,8 @@ PAGES = [
   ],
   "faqs": [
    ("Serve un avvocato per presentare denuncia?", "No, puoi farlo da solo. Un legale è utile per una querela completa e, soprattutto, per le azioni che riguardano il denaro."),
-   ("Quanto costa un avvocato per una truffa online?", "In Act Here la prima consulenza è gratuita. Serve a verificare il tuo caso: cosa è successo, quali prove esistono e quali strade sono realistiche. Ogni attività successiva viene concordata per iscritto prima di iniziare."),
-   ("Un avvocato può garantire il recupero dei soldi?", "No. Chi promette il risultato non è affidabile. Si possono valutare le strade realistiche e i loro costi."),
+   ("Quanto costa un avvocato per una truffa online?", "In Act Here la consulenza è gratuita. Dobbiamo prima verificare la tua pretesa e capirne le prospettive e la fattibilità, e questo dipende dal livello delle prove."),
+   ("Un avvocato può garantire il recupero dei soldi?", "No. Chi promette il risultato non è affidabile. Si possono valutare le strade realistiche e la loro fattibilità."),
    ("Meglio un avvocato vicino a casa?", "Conta più l'esperienza specifica della distanza: questi casi coinvolgono banche, piattaforme e soggetti esteri e si gestiscono in gran parte a distanza."),
   ],
  },
@@ -262,7 +262,7 @@ PAGES = [
      "Presenta reclamo formale. Se l'intermediario è autorizzato puoi poi ricorrere all'Arbitro per le Controversie Finanziarie.",
      "Contatta la banca per le procedure di richiamo e contestazione e fai valutare il caso.",
     ]),
-    ("h3", "Commissioni nascoste prelievo: cosa fare se compaiono costi non previsti"),
+    ("h3", "Commissioni nascoste prelievo: cosa fare"),
     ("p", "Chiedi per iscritto il riferimento contrattuale, verifica l'intermediario sugli albi ufficiali e fai valutare la documentazione da un legale."),
    ]),
   ],
@@ -365,7 +365,7 @@ FOOT = """<div id="footer-placeholder"></div>
 CTA = """<section style="padding:3rem 0;background:var(--navy);color:#fff;text-align:center">
  <div style="max-width:640px;margin:0 auto;padding:0 5%">
  <h2 style="font-family:var(--font-serif);color:#fff;font-size:1.9rem;margin-bottom:.8rem">Hai perso denaro? Fai valutare il caso.</h2>
- <p style="color:rgba(255,255,255,.75);margin-bottom:1.5rem">Consulenza riservata con il nostro team di contenzioso. Non ci limitiamo a negoziare: siamo pronti ad agire in giudizio.</p>
+ <p style="color:rgba(255,255,255,.75);margin-bottom:1.5rem">Consulenza gratuita e riservata con il nostro team di contenzioso. Non ci limitiamo a negoziare: siamo pronti ad agire in giudizio.</p>
  <a href="../pages/contact.html" class="btn-primary">Prenota una consulenza gratuita</a>
  </div>
 </section>

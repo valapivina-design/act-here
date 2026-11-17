@@ -237,7 +237,7 @@ GUIDES_DATA = [
         ],
         "faqs": [
             ("Are fund recovery services legitimate?", "Some are — but the industry is saturated with scams. The test: did they contact you (red flag), do they guarantee recovery (red flag), and can you verify their company registration and litigation counsel independently (essential). Act Here is UK litigation counsel — we don't cold-call, and we don't guarantee outcomes."),
-            ("How much does fund recovery cost?", "At Act Here the first consultation is free. We use it to validate your claim: what happened, what evidence exists, and which routes are realistic. Any work beyond that is agreed with you in writing before it starts."),
+            ("How much does fund recovery cost?", "The consultation is free. We first need to validate your claim and understand its prospects and feasibility, and that depends on the level of proof."),
             ("Can I get my money back from a scam broker?", "Sometimes. The realistic routes are card chargeback (within 120 days), bank recall (within days), crypto tracing (permanent trail), and civil litigation (6-year limitation). The odds drop every week — which is why the first move is to preserve evidence and get a professional assessment while every route is still open."),
         ],
         "related": [],
