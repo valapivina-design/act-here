@@ -210,51 +210,211 @@ document.addEventListener('DOMContentLoaded', () => {
  });
  });
 
- loadReviewCommentsThenInject();
+ loadPageCommentsThenInject();
 });
 
-/* Published comments + moderated Formcarry form on review pages. */
-function loadReviewCommentsThenInject() {
+/* Comment UI copy by page language (guides + reviews). */
+const COMMENT_UI = {
+ en: {
+  heading: 'Comments & What Readers Are Saying',
+  leadReview: 'Comments from people describing problems with {topic}. Our team may reply when the reported loss appears material and a confidential consultation could help. <a href="#submit-for-review">Submit for review</a> - all new submissions are moderated before publishing.',
+  leadGuide: 'Comments from readers facing issues like those in this guide. Our team may reply when the reported loss appears material and a confidential consultation could help. <a href="#submit-for-review">Submit for review</a> - all new submissions are moderated before publishing.',
+  empty: 'No public comments published for this page yet.',
+  formHeading: 'Leave a comment',
+  formLeadReview: 'Share your experience with {topic}. <strong>All comments are moderated</strong> before anything is published. Email and phone are used only to follow up if needed and are <strong>never published</strong>.',
+  formLeadGuide: 'Share your experience related to this guide. <strong>All comments are moderated</strong> before anything is published. Email and phone are used only to follow up if needed and are <strong>never published</strong>. Do not name brokers here if you prefer privacy - you can share details in the free consultation.',
+  name: 'Name',
+  email: 'Email',
+  phone: 'Phone',
+  notPublished: '(not published)',
+  subject: 'Subject',
+  comment: 'Comment',
+  namePh: 'Your name',
+  emailPh: 'you@example.com',
+  phonePh: 'Phone number',
+  subjectPh: 'Brief subject line',
+  bodyPh: 'Describe what happened. Include dates and how you paid if you can.',
+  countryCode: 'Country code',
+  privacy: 'By submitting, you agree we may contact you about this report. We decide which comments go live after review. See our <a href="{privacy}">Privacy Policy</a>.',
+  submit: 'Submit comment',
+  sending: 'Sending…',
+  thanks: 'Thank you. Your comment was received and will be moderated before it appears live.',
+  errSubmit: 'We could not submit that comment. Please try again in a moment.',
+  errNetwork: 'No response from the form service. Please try again or email hello@act-here.uk.',
+  supportRole: 'Support',
+  ctaFallback: 'Book a free consultation →',
+  gotcha: 'Leave blank'
+ },
+ de: {
+  heading: 'Kommentare & Stimmen von Betroffenen',
+  leadReview: 'Kommentare zu Problemen mit {topic}. Unser Team antwortet, wenn der gemeldete Schaden erheblich wirkt und eine vertrauliche Beratung helfen kann. <a href="#submit-for-review">Zur Prufung einreichen</a> - neue Beitrage werden vor der Veroffentlichung moderiert.',
+  leadGuide: 'Kommentare von Lesern mit ahnlichen Situationen wie in diesem Ratgeber. Unser Team antwortet bei erheblichem Schaden und wenn eine vertrauliche Beratung helfen kann. <a href="#submit-for-review">Zur Prufung einreichen</a> - neue Beitrage werden vor der Veroffentlichung moderiert.',
+  empty: 'Noch keine offentlichen Kommentare zu dieser Seite.',
+  formHeading: 'Kommentar hinterlassen',
+  formLeadReview: 'Schildern Sie Ihre Erfahrung mit {topic}. <strong>Alle Kommentare werden moderiert</strong>, bevor etwas erscheint. E-Mail und Telefon dienen nur der Ruckfrage und werden <strong>nicht veroeffentlicht</strong>.',
+  formLeadGuide: 'Schildern Sie Ihre Erfahrung zu diesem Thema. <strong>Alle Kommentare werden moderiert</strong>. E-Mail und Telefon dienen nur der Ruckfrage und werden <strong>nicht veroeffentlicht</strong>. Broker-Namen konnen Sie in der kostenlosen Beratung nennen.',
+  name: 'Name',
+  email: 'E-Mail',
+  phone: 'Telefon',
+  notPublished: '(nicht oeffentlich)',
+  subject: 'Betreff',
+  comment: 'Kommentar',
+  namePh: 'Ihr Name',
+  emailPh: 'sie@beispiel.de',
+  phonePh: 'Telefonnummer',
+  subjectPh: 'Kurzer Betreff',
+  bodyPh: 'Beschreiben Sie, was passiert ist. Daten und Zahlungsweg helfen.',
+  countryCode: 'Landesvorwahl',
+  privacy: 'Mit dem Absenden stimmen Sie zu, dass wir Sie zu diesem Bericht kontaktieren konnen. Wir entscheiden, welche Kommentare freigeschaltet werden. Siehe <a href="{privacy}">Datenschutz</a>.',
+  submit: 'Kommentar senden',
+  sending: 'Wird gesendet…',
+  thanks: 'Danke. Ihr Kommentar ist eingegangen und wird vor der Freischaltung gepruft.',
+  errSubmit: 'Kommentar konnte nicht gesendet werden. Bitte versuchen Sie es erneut.',
+  errNetwork: 'Keine Antwort vom Formular-Dienst. Bitte erneut versuchen oder hello@act-here.uk schreiben.',
+  supportRole: 'Support',
+  ctaFallback: 'Kostenlose Beratung buchen →',
+  gotcha: 'Leer lassen'
+ },
+ es: {
+  heading: 'Comentarios y lo que dicen los lectores',
+  leadReview: 'Comentarios sobre problemas con {topic}. Nuestro equipo puede responder cuando la perdida parece material y una consulta confidencial puede ayudar. <a href="#submit-for-review">Enviar para revision</a> - las nuevas entradas se moderan antes de publicarse.',
+  leadGuide: 'Comentarios de lectores con situaciones como las de esta guia. Nuestro equipo puede responder cuando la perdida parece material y una consulta confidencial puede ayudar. <a href="#submit-for-review">Enviar para revision</a> - las nuevas entradas se moderan antes de publicarse.',
+  empty: 'Aun no hay comentarios publicos en esta pagina.',
+  formHeading: 'Deje un comentario',
+  formLeadReview: 'Comparta su experiencia con {topic}. <strong>Todos los comentarios se moderan</strong> antes de publicarse. Email y telefono solo para seguimiento y <strong>nunca se publican</strong>.',
+  formLeadGuide: 'Comparta su experiencia sobre este tema. <strong>Todos los comentarios se moderan</strong>. Email y telefono solo para seguimiento y <strong>nunca se publican</strong>. Puede dar el nombre del broker en la consulta gratuita.',
+  name: 'Nombre',
+  email: 'Email',
+  phone: 'Telefono',
+  notPublished: '(no se publica)',
+  subject: 'Asunto',
+  comment: 'Comentario',
+  namePh: 'Su nombre',
+  emailPh: 'usted@ejemplo.com',
+  phonePh: 'Numero de telefono',
+  subjectPh: 'Asunto breve',
+  bodyPh: 'Describa lo ocurrido. Fechas y forma de pago ayudan.',
+  countryCode: 'Codigo de pais',
+  privacy: 'Al enviar, acepta que podamos contactarle sobre este informe. Decidimos que comentarios se publican. Vea nuestra <a href="{privacy}">Politica de privacidad</a>.',
+  submit: 'Enviar comentario',
+  sending: 'Enviando…',
+  thanks: 'Gracias. Su comentario se recibio y se moderara antes de publicarse.',
+  errSubmit: 'No pudimos enviar el comentario. Intentelo de nuevo en un momento.',
+  errNetwork: 'Sin respuesta del servicio del formulario. Intentelo de nuevo o escriba a hello@act-here.uk.',
+  supportRole: 'Soporte',
+  ctaFallback: 'Reserve una consulta gratuita →',
+  gotcha: 'Dejar en blanco'
+ },
+ it: {
+  heading: 'Commenti e voci dei lettori',
+  leadReview: 'Commenti su problemi con {topic}. Il team puo rispondere quando la perdita appare rilevante e una consulenza riservata puo aiutare. <a href="#submit-for-review">Invia per revisione</a> - i nuovi contributi sono moderati prima della pubblicazione.',
+  leadGuide: 'Commenti di lettori con situazioni simili a questa guida. Il team puo rispondere quando la perdita appare rilevante e una consulenza riservata puo aiutare. <a href="#submit-for-review">Invia per revisione</a> - i nuovi contributi sono moderati prima della pubblicazione.',
+  empty: 'Ancora nessun commento pubblico su questa pagina.',
+  formHeading: 'Lascia un commento',
+  formLeadReview: 'Condivida la sua esperienza con {topic}. <strong>Tutti i commenti sono moderati</strong> prima della pubblicazione. Email e telefono servono solo per il follow-up e <strong>non vengono pubblicati</strong>.',
+  formLeadGuide: 'Condivida la sua esperienza su questo tema. <strong>Tutti i commenti sono moderati</strong>. Email e telefono solo per follow-up e <strong>non pubblicati</strong>. Puo indicare il broker nella consulenza gratuita.',
+  name: 'Nome',
+  email: 'Email',
+  phone: 'Telefono',
+  notPublished: '(non pubblicato)',
+  subject: 'Oggetto',
+  comment: 'Commento',
+  namePh: 'Il suo nome',
+  emailPh: 'lei@esempio.it',
+  phonePh: 'Numero di telefono',
+  subjectPh: 'Oggetto breve',
+  bodyPh: 'Descriva cosa e successo. Date e metodo di pagamento aiutano.',
+  countryCode: 'Prefisso paese',
+  privacy: 'Inviando, accetta che possiamo contattarla su questa segnalazione. Decidiamo quali commenti pubblicare. Veda la <a href="{privacy}">Privacy Policy</a>.',
+  submit: 'Invia commento',
+  sending: 'Invio…',
+  thanks: 'Grazie. Il commento e stato ricevuto e sara moderato prima di andare online.',
+  errSubmit: 'Non siamo riusciti a inviare il commento. Riprovi tra poco.',
+  errNetwork: 'Nessuna risposta dal servizio form. Riprovi o scriva a hello@act-here.uk.',
+  supportRole: 'Supporto',
+  ctaFallback: 'Prenota una consulenza gratuita →',
+  gotcha: 'Lasciare vuoto'
+ }
+};
+
+function getCommentPageContext() {
  const path = window.location.pathname || '';
- if (!/\/reviews\/.+-review\.html$/i.test(path)) return;
+ const file = (path.split('/').pop() || '').replace(/\.html$/i, '');
+ if (/\/reviews\/.+-review\.html$/i.test(path)) {
+  const h1 = document.querySelector('.page-hero h1, h1');
+  const topic = (h1 ? h1.textContent : file).replace(/\s*Review\s*$/i, '').trim() || file;
+  return { kind: 'review', slug: file, dbKey: file, lang: 'en', topic: topic, leadSource: 'act-here-review-comment' };
+ }
+ // Guide pages: /guides/*.html, /de|it|es/*.html (exclude index)
+ const m = path.match(/\/(guides|de|it|es)\/([^/]+)\.html$/i);
+ if (!m) return null;
+ const folder = m[1].toLowerCase();
+ const stem = m[2];
+ if (/^index$/i.test(stem)) return null;
+ const lang = folder === 'guides' ? 'en' : folder;
+ const h1 = document.querySelector('.page-hero h1, h1');
+ const topic = (h1 ? h1.textContent : stem).trim() || stem;
+ return {
+  kind: 'guide',
+  slug: stem,
+  dbKey: folder + '/' + stem,
+  lang: lang,
+  topic: topic,
+  leadSource: 'act-here-guide-comment'
+ };
+}
+
+function loadPageCommentsThenInject() {
+ const ctx = getCommentPageContext();
+ if (!ctx) return;
 
  function go() {
-  injectPublishedComments();
-  injectReviewCommentForm();
+  injectPublishedComments(ctx);
+  injectPageCommentForm(ctx);
  }
- if (window.ACT_HERE_COMMENTS) { go(); return; }
- const existing = document.querySelector('script[data-act-here-comments]');
+
+ if (ctx.kind === 'review') {
+  if (window.ACT_HERE_COMMENTS) { go(); return; }
+  loadCommentScript('js/comments.js', 'data-act-here-comments', go);
+  return;
+ }
+ if (window.ACT_HERE_GUIDE_COMMENTS) { go(); return; }
+ loadCommentScript('js/guide_comments.js', 'data-act-here-guide-comments', go);
+}
+
+function loadCommentScript(src, attr, go) {
+ const existing = document.querySelector('script[' + attr + ']');
  if (existing) {
   existing.addEventListener('load', go);
   existing.addEventListener('error', go);
   return;
  }
  const s = document.createElement('script');
- s.src = resolvePath('js/comments.js');
- s.setAttribute('data-act-here-comments', '1');
+ s.src = resolvePath(src);
+ s.setAttribute(attr, '1');
  s.onload = go;
  s.onerror = go;
  document.head.appendChild(s);
 }
 
-function formatCommentDate(iso) {
+function formatCommentDate(iso, lang) {
  try {
   const d = new Date(iso + 'T12:00:00');
-  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  const loc = lang === 'de' ? 'de-DE' : lang === 'es' ? 'es-ES' : lang === 'it' ? 'it-IT' : 'en-GB';
+  return d.toLocaleDateString(loc, { day: 'numeric', month: 'short', year: 'numeric' });
  } catch (e) { return iso || ''; }
 }
 
-function injectPublishedComments() {
- const path = window.location.pathname || '';
- if (!/\/reviews\/.+-review\.html$/i.test(path)) return;
+function injectPublishedComments(ctx) {
+ if (!ctx) ctx = getCommentPageContext();
+ if (!ctx) return;
  if (document.getElementById('reviews-grid')) return;
 
- const file = path.split('/').pop() || '';
- const slug = file.replace(/\.html$/i, '');
- const h1 = document.querySelector('.page-hero h1, h1');
- const company = (h1 ? h1.textContent : slug).replace(/\s*Review\s*$/i, '').trim() || slug;
- const db = window.ACT_HERE_COMMENTS || {};
- const items = db[slug] || [];
+ const ui = COMMENT_UI[ctx.lang] || COMMENT_UI.en;
+ const db = ctx.kind === 'guide'
+  ? (window.ACT_HERE_GUIDE_COMMENTS || {})
+  : (window.ACT_HERE_COMMENTS || {});
+ const items = db[ctx.dbKey] || [];
  const consultHref = resolvePath('pages/contact.html');
 
  const block = document.createElement('div');
@@ -263,89 +423,93 @@ function injectPublishedComments() {
 
  let cards = '';
  if (!items.length) {
-  cards = '<p class="reviews-empty-soft">No public comments published for this profile yet.</p>';
+  cards = '<p class="reviews-empty-soft">' + escapeHtml(ui.empty) + '</p>';
  } else {
   for (let i = 0; i < items.length; i++) {
    const c = items[i];
    if ((c.name || '').toLowerCase().indexOf('trustpilot') !== -1) continue;
    if ((c.title || '').toLowerCase().indexOf('trustpilot') !== -1) continue;
-   const lang = c.lang || 'en';
+   const lang = c.lang || ctx.lang || 'en';
    cards += '<article class="review-card" lang="' + escapeAttr(lang) + '">' +
-    '<div class="review-meta"><time datetime="' + escapeAttr(c.date || '') + '">' + escapeHtml(formatCommentDate(c.date)) + '</time></div>' +
+    '<div class="review-meta"><time datetime="' + escapeAttr(c.date || '') + '">' + escapeHtml(formatCommentDate(c.date, ctx.lang)) + '</time></div>' +
     '<h3 class="review-title">' + escapeHtml(c.title || '') + '</h3>' +
     '<p class="review-body">' + escapeHtml(c.text || '') + '</p>' +
     '<div class="review-author"><div class="avatar">' + escapeHtml(c.initials || '?') + '</div>' +
     '<div class="review-author-text"><strong>' + escapeHtml(c.name || '') + '</strong><span>' + escapeHtml(c.country || '') + '</span></div></div>';
    if (c.support) {
+    const cta = c.support.ctaLabel || ui.ctaFallback;
     cards += '<div class="firm-reply" lang="' + escapeAttr(lang) + '">' +
-     '<div class="firm-reply-head"><div class="avatar firm">AH</div><div><strong>Act Here</strong><span>Support</span></div></div>' +
+     '<div class="firm-reply-head"><div class="avatar firm">AH</div><div><strong>Act Here</strong><span>' + escapeHtml(ui.supportRole) + '</span></div></div>' +
      '<p>' + escapeHtml(c.support.text || '') + '</p>' +
-     '<a href="' + escapeAttr(consultHref) + '">' + escapeHtml(c.support.ctaLabel || 'Contact us for a consultation →') + '</a></div>';
+     '<a href="' + escapeAttr(consultHref) + '">' + escapeHtml(cta) + '</a></div>';
    }
    cards += '</article>';
   }
  }
 
+ const leadTpl = ctx.kind === 'guide' ? ui.leadGuide : ui.leadReview;
+ const lead = leadTpl.replace(/\{topic\}/g, escapeHtml(ctx.topic));
+
  block.innerHTML =
   '<div class="reviews-head">' +
-  '<h2>Reviews &amp; What People Are Saying</h2>' +
-  '<p class="reviews-lead">Comments from people describing problems with ' + escapeHtml(company) +
-  '. Our team may reply when the reported loss appears material and a confidential consultation could help. ' +
-  '<a href="#submit-for-review">Submit for review</a> — all new submissions are moderated before publishing.</p>' +
+  '<h2>' + escapeHtml(ui.heading) + '</h2>' +
+  '<p class="reviews-lead">' + lead + '</p>' +
   '</div><div class="reviews-grid" id="reviews-grid">' + cards + '</div>';
 
  const cta = document.querySelector('section.cta-section');
  const footer = document.querySelector('footer') || document.getElementById('footer-placeholder');
- if (cta) cta.parentNode.insertBefore(block, cta);
- else if (footer) footer.parentNode.insertBefore(block, footer);
+ // Guide pages often put the navy CTA before the footer without .cta-section
+ const navyCta = document.querySelector('section[style*="background:var(--navy)"]');
+ const insertBefore = cta || navyCta || footer;
+ if (insertBefore && insertBefore.parentNode) insertBefore.parentNode.insertBefore(block, insertBefore);
  else document.body.appendChild(block);
 }
 
-/* Moderated comment form on review pages (Formcarry vb0cjK_9y7T). */
-function injectReviewCommentForm() {
- const path = window.location.pathname || '';
- if (!/\/reviews\/.+-review\.html$/i.test(path)) return;
+/* Moderated comment form (Formcarry vb0cjK_9y7T) on review + guide pages. */
+function injectPageCommentForm(ctx) {
+ if (!ctx) ctx = getCommentPageContext();
+ if (!ctx) return;
  if (document.getElementById('review-comment-form')) return;
 
- const file = path.split('/').pop() || '';
- const slug = file.replace(/\.html$/i, '');
- const h1 = document.querySelector('.page-hero h1, h1');
- const company = (h1 ? h1.textContent : slug).replace(/\s*Review\s*$/i, '').trim() || slug;
+ const ui = COMMENT_UI[ctx.lang] || COMMENT_UI.en;
  const privacyHref = resolvePath('pages/privacy-policy.html');
+ const formLeadTpl = ctx.kind === 'guide' ? ui.formLeadGuide : ui.formLeadReview;
+ const formLead = formLeadTpl.replace(/\{topic\}/g, escapeHtml(ctx.topic));
+ const privacy = ui.privacy.replace(/\{privacy\}/g, escapeAttr(privacyHref));
 
  const wrap = document.createElement('section');
  wrap.className = 'comment-form-block';
  wrap.id = 'submit-for-review';
  wrap.setAttribute('aria-labelledby', 'comment-form-heading');
  wrap.innerHTML = `
- <h2 id="comment-form-heading">Leave a comment</h2>
- <p class="comment-form-lead">Share your experience with ${escapeHtml(company)}. <strong>All comments are moderated</strong> before anything is published. Email and phone are used only to follow up if needed and are <strong>never published</strong>.</p>
+ <h2 id="comment-form-heading">${escapeHtml(ui.formHeading)}</h2>
+ <p class="comment-form-lead">${formLead}</p>
  <form class="comment-form" id="review-comment-form" action="https://formcarry.com/s/vb0cjK_9y7T" method="POST" novalidate>
  <input type="hidden" name="form_type" value="comment">
- <input type="hidden" name="lead_source" value="act-here-review-comment">
- <input type="hidden" name="company" id="comment-company" value="${escapeAttr(company)}">
- <input type="hidden" name="slug" id="comment-slug" value="${escapeAttr(slug)}">
+ <input type="hidden" name="lead_source" value="${escapeAttr(ctx.leadSource)}">
+ <input type="hidden" name="company" id="comment-company" value="${escapeAttr(ctx.topic)}">
+ <input type="hidden" name="slug" id="comment-slug" value="${escapeAttr(ctx.dbKey)}">
  <input type="hidden" name="page_url" id="comment-page-url" value="">
- <input type="hidden" name="_page" value="comment_${escapeAttr(slug)}">
+ <input type="hidden" name="_page" value="comment_${escapeAttr(ctx.dbKey)}">
  <div class="hp" aria-hidden="true">
- <label for="comment-gotcha">Leave blank</label>
+ <label for="comment-gotcha">${escapeHtml(ui.gotcha)}</label>
  <input type="text" id="comment-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
  </div>
  <div class="field-row">
  <div class="field">
- <label for="comment-name">Name</label>
- <input type="text" id="comment-name" name="name" required autocomplete="name" placeholder="Your name">
+ <label for="comment-name">${escapeHtml(ui.name)}</label>
+ <input type="text" id="comment-name" name="name" required autocomplete="name" placeholder="${escapeAttr(ui.namePh)}">
  </div>
  <div class="field">
- <label for="comment-email">Email <span class="hint">(not published)</span></label>
- <input type="email" id="comment-email" name="email" required autocomplete="email" placeholder="you@example.com">
+ <label for="comment-email">${escapeHtml(ui.email)} <span class="hint">${escapeHtml(ui.notPublished)}</span></label>
+ <input type="email" id="comment-email" name="email" required autocomplete="email" placeholder="${escapeAttr(ui.emailPh)}">
  </div>
  </div>
  <div class="field">
- <label for="comment-phone">Phone <span class="hint">(not published)</span></label>
+ <label for="comment-phone">${escapeHtml(ui.phone)} <span class="hint">${escapeHtml(ui.notPublished)}</span></label>
  <div class="phone-row">
- <select id="comment-country-code" name="country_code" required aria-label="Country code">
- <option value="" selected disabled>Country code</option>
+ <select id="comment-country-code" name="country_code" required aria-label="${escapeAttr(ui.countryCode)}">
+ <option value="" selected disabled>${escapeHtml(ui.countryCode)}</option>
  <option value="+44">+44 UK</option>
  <option value="+1">+1 US/CA</option>
  <option value="+61">+61 AU</option>
@@ -367,30 +531,32 @@ function injectReviewCommentForm() {
  <option value="+47">+47 NO</option>
  <option value="+41">+41 CH</option>
  </select>
- <input type="tel" id="comment-phone" name="phone" required autocomplete="tel-national" placeholder="Phone number">
+ <input type="tel" id="comment-phone" name="phone" required autocomplete="tel-national" placeholder="${escapeAttr(ui.phonePh)}">
  </div>
  </div>
  <div class="field">
- <label for="comment-subject">Subject</label>
- <input type="text" id="comment-subject" name="subject" required maxlength="160" placeholder="Brief subject line">
+ <label for="comment-subject">${escapeHtml(ui.subject)}</label>
+ <input type="text" id="comment-subject" name="subject" required maxlength="160" placeholder="${escapeAttr(ui.subjectPh)}">
  </div>
  <div class="field">
- <label for="comment-body">Comment</label>
- <textarea id="comment-body" name="comment" required maxlength="4000" placeholder="Describe what happened. Include the domain you used if you can."></textarea>
+ <label for="comment-body">${escapeHtml(ui.comment)}</label>
+ <textarea id="comment-body" name="comment" required maxlength="4000" placeholder="${escapeAttr(ui.bodyPh)}"></textarea>
  </div>
  <div class="form-actions">
- <p class="privacy-note">By submitting, you agree we may contact you about this report. We decide which comments go live after review. See our <a href="${privacyHref}">Privacy Policy</a>.</p>
- <button type="submit" class="btn-primary" id="comment-submit">Submit comment</button>
+ <p class="privacy-note">${privacy}</p>
+ <button type="submit" class="btn-primary" id="comment-submit">${escapeHtml(ui.submit)}</button>
  </div>
  <p class="comment-form-status" id="comment-form-status" role="status" aria-live="polite"></p>
  </form>`;
 
  const published = document.getElementById('public-comments');
  const cta = document.querySelector('section.cta-section');
+ const navyCta = document.querySelector('section[style*="background:var(--navy)"]');
  const footer = document.querySelector('footer') || document.getElementById('footer-placeholder');
  if (published && published.nextSibling) published.parentNode.insertBefore(wrap, published.nextSibling);
  else if (published) published.parentNode.appendChild(wrap);
  else if (cta) cta.parentNode.insertBefore(wrap, cta);
+ else if (navyCta) navyCta.parentNode.insertBefore(wrap, navyCta);
  else if (footer) footer.parentNode.insertBefore(wrap, footer);
  else document.body.appendChild(wrap);
 
@@ -405,13 +571,14 @@ function injectReviewCommentForm() {
  const slugEl = document.getElementById('comment-slug');
  const companyName = companyEl ? companyEl.value : '';
  const companySlug = slugEl ? slugEl.value : '';
+ const leadSource = ctx.leadSource;
 
  form.addEventListener('submit', function (e) {
  e.preventDefault();
  if (status) { status.textContent = ''; status.className = 'comment-form-status'; }
  if (!form.checkValidity()) { form.reportValidity(); return; }
  if (btn) btn.disabled = true;
- if (status) status.textContent = 'Sending…';
+ if (status) status.textContent = ui.sending;
  fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) })
  .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }).catch(function () { return { ok: res.ok, data: {} }; }); })
  .then(function (result) {
@@ -419,23 +586,23 @@ function injectReviewCommentForm() {
  if (result.ok && (data.code === 200 || data.status === 'success' || !data.code)) {
  if (status) {
  status.className = 'comment-form-status ok';
- status.textContent = 'Thank you. Your comment was received and will be moderated before it appears live.';
+ status.textContent = ui.thanks;
  }
  form.reset();
  if (form.elements.form_type) form.elements.form_type.value = 'comment';
- if (form.elements.lead_source) form.elements.lead_source.value = 'act-here-review-comment';
+ if (form.elements.lead_source) form.elements.lead_source.value = leadSource;
  if (companyEl) companyEl.value = companyName;
  if (slugEl) slugEl.value = companySlug;
  if (urlEl) urlEl.value = window.location.href;
  } else if (status) {
  status.className = 'comment-form-status err';
- status.textContent = (data && data.message) || 'We could not submit that comment. Please try again in a moment.';
+ status.textContent = (data && data.message) || ui.errSubmit;
  }
  })
  .catch(function () {
  if (status) {
  status.className = 'comment-form-status err';
- status.textContent = 'No response from the form service. Please try again or email hello@act-here.uk.';
+ status.textContent = ui.errNetwork;
  }
  })
  .finally(function () { if (btn) btn.disabled = false; });
