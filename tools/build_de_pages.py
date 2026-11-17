@@ -20,7 +20,6 @@ PAGES = [
                     "Auszahlung blockiert: Die Plattform verweigert die Auszahlung Ihrer Gewinne oder Ihres Guthabens – mit immer neuen Begründungen.",
                     "Fake-Broker oder Scam-Plattform: Das angebliche Investment existierte nie; die Website ist inzwischen offline oder der Support schweigt.",
                     "Romance Scam / Pig Butchering: Eine Online-Bekanntschaft hat Sie über Wochen in ein Krypto-Investment gelockt.",
-                    "Vorab-Gebühren: Sie sollen Steuern, Freigabegebühren oder Verifizierungskosten zahlen, bevor angeblich ausgezahlt wird – ein klassisches Betrugsmuster.",
                     "Erbe oder Wallet-Zugang: Angehörige haben keinen Zugriff auf Wallets oder Börsenkonten eines Verstorbenen.",
                     "Konto gesperrt bei einer echten Börse: Ihr Konto bei einer regulierten Exchange wurde ohne nachvollziehbaren Grund eingefroren.",
                 ]),
@@ -40,7 +39,7 @@ PAGES = [
             ]),
             ("Erste Schritte", "Was Sie sofort tun sollten – bevor Spuren verwischen", [
                 ("ul", [
-                    "Zahlen Sie nichts mehr. Jede weitere „Gebühr“, „Steuer“ oder „Freigabezahlung“ ist nur der nächste Griff in Ihre Tasche.",
+                    "Leisten Sie keine weiteren Zahlungen an die Plattform oder an Personen, die in ihrem Namen auftreten.",
                     "Sichern Sie alle Beweise: Screenshots von Konto und Guthaben, Chats, E-Mails, Überweisungsbelege, Wallet-Adressen und die exakten URLs der Plattform.",
                     "Kontaktieren Sie noch heute Ihre Bank: Überweisungen lassen sich teilweise zurückrufen, Kreditkartenzahlungen reklamieren.",
                     "Erstatten Sie Strafanzeige bei der Polizei oder der Online-Wache Ihres Bundeslandes – sie schadet nicht, ersetzt aber keine zivilrechtliche Strategie.",
@@ -68,7 +67,7 @@ PAGES = [
         "sections": [
             ("Sofortmaßnahmen", "Anlagebetrug: Was tun in den ersten 72 Stunden", [
                 ("ul", [
-                    "Keine weiteren Zahlungen. Jede Forderung nach „Steuern“, „Freigabegebühren“ oder „Verifizierungskosten“ ist der Versuch, noch mehr zu erbeuten.",
+                    "Keine weiteren Zahlungen an die Plattform oder an Personen, die in ihrem Namen auftreten.",
                     "Beweise sichern: Screenshots des Kontos und der angezeigten Gewinne, alle Chats und E-Mails, Überweisungsbelege, Transaktions-IDs, Wallet-Adressen, die exakten URLs. Plattformen gehen über Nacht offline.",
                     "Bank kontaktieren: Überweisungen lassen sich teilweise zurückholen, Kreditkartenzahlungen reklamieren (Chargeback, meist 120 Tage Frist).",
                     "Strafanzeige erstatten: bei jeder Polizeidienststelle oder der Online-Wache Ihres Bundeslandes. Sie dokumentiert den Fall, ersetzt aber keine Rückholung.",
@@ -91,7 +90,7 @@ PAGES = [
                     "Garantierte hohe Renditen ohne Verlustrisiko („10–20 % pro Monat, sicher“).",
                     "Zeitdruck: „Nur heute“, „letzte Plätze“, „sofort einzahlen, sonst verfällt der Bonus“.",
                     "Kleine Test-Auszahlungen am Anfang, um Vertrauen aufzubauen – danach blockieren größere Auszahlungen.",
-                    "Neue Zahlungsforderungen vor der Auszahlung: Steuern, Gebühren, Freigabekosten, Versicherungen.",
+                    "Immer neue Bedingungen und Begründungen, sobald Sie eine Auszahlung beantragen.",
                     "Keine oder gefälschte Regulierung: Lizenznummern, die auf keinem offiziellen Register (BaFin, FCA, CySEC) existieren oder einer anderen Firma gehören.",
                     "Zahlung nur in Kryptowährung oder auf ausländische Konten wechselnder Empfänger.",
                 ]),
@@ -115,7 +114,7 @@ PAGES = [
         "keywords": "trading betrug, trading betrug was tun, trading betrug melden, trading betrug anwalt, trading betrug geld zurück, online trading betrug, trading betrugsmasche, fake broker erkennen, trading plattform betrug, cfd betrug, forex betrug",
         "badge": "Trading-Betrug · Aktualisiert November 2026",
         "h1": "Trading Betrug: So erkennen Sie ihn – und so handeln Sie richtig",
-        "lead": "Die Plattform zeigte steigende Kurse und satte Gewinne – doch als Sie auszahlen wollten, begannen die Probleme: neue Gebühren, endlose Verifizierung, Funkstille. Trading-Betrug über gefälschte Broker und manipulierte Plattformen ist eine der größten Betrugsmaschen Europas. Hier erfahren Sie, wie Sie ihn erkennen, wo Sie ihn melden und welche Wege Ihr Geld tatsächlich zurückholen können.",
+        "lead": "Die Plattform zeigte steigende Kurse und satte Gewinne – doch als Sie auszahlen wollten, begannen die Probleme: neue Bedingungen, endlose Verifizierung, Funkstille. Trading-Betrug über gefälschte Broker und manipulierte Plattformen ist eine der größten Betrugsmaschen Europas. Hier erfahren Sie, wie Sie ihn erkennen, wo Sie ihn melden und welche Wege Ihr Geld tatsächlich zurückholen können.",
         "sections": [
             ("Das Schema", "Wie Trading-Betrug funktioniert: Das Drehbuch der Täter", [
                 ("p", "Fast jeder Trading-Betrug folgt demselben Drehbuch: Werbung oder ein Anruf mit einem „Geheimtipp“, eine professionell wirkende Plattform, ein persönlicher „Kontomanager“, kleine Anfangsgewinne – und dann die Sperrung der Auszahlung, sobald größere Beträge im Spiel sind. Die angezeigten Gewinne existieren nur auf dem Bildschirm: Die Plattform ist keine echte Handelsumgebung, sondern eine Kulisse, deren Zahlen der Betreiber frei bearbeiten kann."),
@@ -123,7 +122,7 @@ PAGES = [
                     "Kontaktaufnahme: Werbeanzeige mit Promis, Cold Call, WhatsApp- oder Telegram-Nachricht – oft beginnt es mit einer „Verwechslung“.",
                     "Vertrauensphase: Ein freundlicher Kontomanager, schnelle kleine Gewinne, oft eine funktionierende erste Test-Auszahlung.",
                     "Eskalation: Druck zu höheren Einzahlungen – Boni, „VIP-Status“, angebliche Sonderkonditionen.",
-                    "Blockade: Bei der Auszahlung kommen Steuern, Gebühren, Verifizierungsschleifen und schließlich Funkstille oder Kontosperrung.",
+                    "Blockade: Bei der Auszahlung folgen Verifizierungsschleifen, wechselnde Begründungen und schließlich Funkstille oder Kontosperrung.",
                 ]),
             ]),
             ("Warnsignale", "Trading-Betrug erkennen: Der 60-Sekunden-Check", [
@@ -132,7 +131,7 @@ PAGES = [
                     "Lizenznummer gehört einer anderen, echten Firma (Clone-Firm) – Domain, Telefonnummer oder E-Mail weichen vom Registereintrag ab.",
                     "Einzahlung nur per Krypto oder auf wechselnde ausländische Konten möglich.",
                     "Garantierte Gewinne, „kein Risiko“, Renditen von 10 % und mehr pro Monat.",
-                    "Vorab-Forderungen vor der Auszahlung: Steuer, Freigabegebühr, Versicherung – zahlbar in Neugeld.",
+                    "Wechselnde Begründungen und neue Bedingungen, sobald Sie auszahlen wollen.",
                     "Der „Berater“ ruft genau dann an, wenn Sie auszahlen wollen – und versucht, Sie davon abzubringen.",
                 ]),
             ]),
@@ -146,11 +145,10 @@ PAGES = [
             ]),
         ],
         "faqs": [
-            ("Trading Betrug: was tun, wenn die Auszahlung blockiert wird?", "Keine weiteren Zahlungen leisten – auch keine „Steuern“ oder „Freigabegebühren“. Alle Beweise sichern, sofort die Bank wegen Rückbuchung kontaktieren (Chargeback-Frist ca. 120 Tage), Strafanzeige erstatten und den Fall kostenlos einschätzen lassen. Je schneller Sie handeln, desto mehr Wege stehen offen."),
+            ("Trading Betrug: was tun, wenn die Auszahlung blockiert wird?", "Keine weiteren Zahlungen leisten. Alle Beweise sichern, sofort die Bank wegen Rückbuchung kontaktieren (Chargeback-Frist ca. 120 Tage), Strafanzeige erstatten und den Fall kostenlos einschätzen lassen. Je schneller Sie handeln, desto mehr Wege stehen offen."),
             ("Wo kann ich einen Trading-Betrug melden?", "Strafanzeige: bei jeder Polizeidienststelle oder online über die Onlinewache Ihres Bundeslandes. Zusätzlich: Meldung an die BaFin (wenn die Plattform Finanzdienstleistungen anbot) und an Ihre Bank. Die Meldung schützt andere – für Ihr Geld ist der zivilrechtliche Weg entscheidend."),
             ("Woran erkenne ich einen Fake-Broker?", "Am fehlenden BaFin-Registereintrag, an Lizenznummern, die zu anderen Firmen gehören, an Krypto-Einzahlungen als einzigem Zahlungsweg, an garantierten Renditen und an Geldforderungen vor der Auszahlung. Prüfen Sie jeden Anbieter im offiziellen Register – nicht über die Website des Brokers selbst."),
             ("Kann ich Geld von einer betrügerischen Trading-Plattform zurückholen?", "Teilweise. Kreditkartenzahlungen: Chargeback innerhalb von ca. 120 Tagen. Banküberweisungen: Rückruf in den ersten Tagen. Krypto-Zahlungen: forensisches Tracing bis zur Auszahlungsbörse. Danach: zivilrechtliche Ansprüche. Eine Garantie gibt es nicht – wohl aber klare realistische Einschätzungen."),
-            ("Die Plattform verlangt eine Steuer vor der Auszahlung – ist das legitim?", "Nein. Seriöse Broker ziehen Steuern und Gebühren vom Guthaben ab – sie verlangen niemals Vorauszahlungen in Neugeld. Die Forderung nach einer „Steuer“, „Freigabegebühr“ oder „Versicherung“ vor der Auszahlung ist das sicherste einzelne Warnsignal für Trading-Betrug."),
             ("Lohnt sich ein Anwalt bei Trading-Betrug?", "Bei Schäden ab etwa 1.000 Euro ist eine Einschätzung sinnvoll, schon wegen der kurzen Bankfristen. Bei größeren Beträgen ist anwaltliche Vertretung meist wirtschaftlich geboten. Die Ersteinschätzung bei Act Here ist kostenlos und unverbindlich."),
         ],
     },
@@ -165,7 +163,7 @@ PAGES = [
         "sections": [
             ("Erste Hilfe", "Online-Betrug: Die ersten vier Schritte", [
                 ("ul", [
-                    "Zahlungen stoppen: Keine weiteren Überweisungen, keine „Gebühren“ oder „Steuern“ mehr – und falls das Konto angegriffen wurde: Bankkarten und Online-Banking sofort sperren lassen.",
+                    "Zahlungen stoppen: Keine weiteren Überweisungen an die Gegenseite – und falls das Konto angegriffen wurde: Bankkarten und Online-Banking sofort sperren lassen.",
                     "Beweise sichern: Screenshots von Plattform, Bestellungen, Chats und Kontoständen; Überweisungsbelege, Transaktions-IDs, E-Mails mit vollständigem Header, die exakten URLs.",
                     "Bank kontaktieren: Überweisungsrückruf (nur in den ersten Tagen), Kreditkarten-Chargeback (ca. 120 Tage), Lastschriftwiderruf (8 Wochen bei autorisierten, 13 Monate bei nicht autorisierten Lastschriften).",
                     "Anzeige erstatten: Online über die Onlinewache Ihres Bundeslandes oder bei jeder Polizeidienststelle – kostenlos und in wenigen Minuten erledigt.",

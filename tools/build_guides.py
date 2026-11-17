@@ -69,7 +69,7 @@ GUIDES_DATA = [
             ("Red flags", "How a broker holds your funds hostage", [
                 ("ul", [
                     "The bonus trap: a 'welcome bonus' was added without you asking — and the broker now claims it voids your right to withdraw your own deposit.",
-                    "Hidden fees invented at withdrawal: a 'processing fee', 'tax' or 'unlocking charge' that was never mentioned when you deposited.",
+                    "New conditions that appear only when you ask to withdraw, and that were never in the terms you accepted when you deposited.",
                     "A fake app or web trader that shows profits on screen but routes nothing to any real market — the balance is a number the operator can edit.",
                     "Endless verification loops: documents accepted yesterday are 'insufficient' today, and each resubmission restarts the clock.",
                     "The account manager who was your best friend while you deposited and now answers every withdrawal request with a bigger investment pitch.",
@@ -77,7 +77,7 @@ GUIDES_DATA = [
             ]),
             ("Behind the block", "Why is my broker not paying out? Two very different causes", [
                 ("p", "Not every delayed payout is fraud. Legitimate brokers can stall when markets are volatile, when their banking partner reviews a large transfer, or when your own verification is incomplete. Those delays are measured in days, come with a clear paper trail, and survive a direct question to support."),
-                ("p", "Malicious blocks work differently. The broker is not short of liquidity — it simply never intended to pay. Withdrawal requests trigger the retention script: fees you must prepay, taxes you must clear, trades you must not close. The purpose is to keep you paying until you give up."),
+                ("p", "Malicious blocks work differently. The broker is not short of liquidity — it simply never intended to pay. Withdrawal requests trigger a retention script: new conditions, new documents, trades you are told not to close. The purpose is to keep your money on the platform until you give up."),
                 ("p", "The practical test: a real operational delay explains itself in verifiable detail. A fraudulent block changes its story every time you ask."),
             ]),
             ("Your options", "Withdrawal blocked: the three routes that still work", [
@@ -90,8 +90,8 @@ GUIDES_DATA = [
             ]),
         ],
         "faqs": [
-            ("Why has my withdrawal been pending for weeks?", "The pattern matters more than the delay. One dated explanation plus a trackable transfer usually means an operational queue. Shifting excuses — new fees, new documents, new taxes — mean the broker is running a retention script. Treat a withdrawal pending for weeks with changing explanations as a fraud event."),
-            ("Can a broker legally charge hidden fees to withdraw my money?", "Legitimate fees must come from your balance, under terms you accepted, and be disclosed before deposit. A demand to pay new money — a tax, an unlocking fee, a commission — before your own funds are released is a hallmark of advance-fee fraud. Real brokers deduct; scammers demand."),
+            ("Why has my withdrawal been pending for weeks?", "The pattern matters more than the delay. One dated explanation plus a trackable transfer usually means an operational queue. Shifting excuses, new documents and new conditions each time you ask mean the broker is running a retention script. Treat a withdrawal pending for weeks with changing explanations as a fraud event."),
+            ("What should I do first when a broker will not pay out?", "Put the withdrawal request and every refusal in writing, save the account statements and chat logs, and check the firm on the official regulator register. Then ask your bank or card issuer about dispute options, and have the matter assessed by litigation counsel while every route is still open."),
             ("Is my money gone if the broker won't pay?", "Not necessarily. Card and bank transfers can sometimes be reversed within the dispute window, and crypto payments leave a permanent public trail. The odds drop every week — which is why the first move is to preserve evidence and ask for a professional assessment while every route is still open."),
         ],
         "related": [],
@@ -180,7 +180,7 @@ GUIDES_DATA = [
                     "The relationship builds slowly — weeks of daily chat before money is ever mentioned.",
                     "The platform is introduced casually, as a favour: 'I'll teach you, but don't tell anyone.'",
                     "Early withdrawals work — a deliberate trust-building move. The big deposits come after.",
-                    "The end is always the same: a 'tax', a 'fee', a 'verification deposit' before you can withdraw — and then silence.",
+                    "The end is always the same: the withdrawal never arrives, the explanations keep changing, and then there is silence.",
                 ]),
             ]),
             ("The money trail", "Where your money actually went", [
@@ -199,7 +199,7 @@ GUIDES_DATA = [
         "faqs": [
             ("Is pig butchering a scam?", "Yes — it is one of the largest fraud categories in the world, responsible for billions in losses. The 'trading platform' is always fake, the 'profits' are numbers the operator edits, and the person who introduced you is part of the operation (often a trafficking victim working under duress)."),
             ("Can I recover money from a pig butchering scam?", "Sometimes. Crypto tracing to the cash-out exchange is the strongest route when you paid in crypto. Card and bank recalls work for fiat deposits within the dispute window. No honest investigator guarantees recovery — what we can give you is a documented, court-usable trail."),
-            ("Why did the platform let me withdraw small amounts at first?", "That is the trust-building phase. The operator lets early withdrawals succeed so you will deposit larger amounts. The big 'tax' or 'fee' demand comes only when you try to withdraw a significant balance."),
+            ("Why did the platform let me withdraw small amounts at first?", "That is the trust-building phase. The operator lets early withdrawals succeed so you will deposit larger amounts. The block comes only when you try to withdraw a significant balance."),
         ],
         "related": [],
     },
