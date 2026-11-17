@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Build rich German victim-intent pages under /de/. Native German copy, full JSON-LD, FAQ in German."""
-import os, json, html as htmlmod
+import os, json, html as htmlmod, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from de_extra_pages import EXTRA_PAGES
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DE = os.path.join(ROOT, "de")
@@ -314,8 +316,14 @@ def render(p):
 </html>
 """
 
+ALL_PAGES = PAGES + EXTRA_PAGES
+
 def main():
-    for p in PAGES:
+    seen = set()
+    for p in ALL_PAGES:
+        if p["slug"] in seen:
+            raise SystemExit(f"duplicate slug {p['slug']}")
+        seen.add(p["slug"])
         path = os.path.join(DE, p["slug"] + ".html")
         with open(path, "w", encoding="utf-8") as f:
             f.write(render(p))

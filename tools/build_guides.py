@@ -15,6 +15,7 @@ GUIDES_DATA = [
         "slug": "prop-trading-scam",
         "title": "Prop Trading Scam: How Fake Prop Firms Steal Challenge Fees | Act Here",
         "description": "Failed your prop firm challenge right before payout? Rules changed after you passed? How prop trading scams work — and what UK litigation can do about it.",
+        "keywords": "prop trading scam, prop firm scam, prop firm payout denied, challenge fee scam, funded account denied, prop trading fraud",
         "kicker": "Prop firm fraud · Updated November 2026",
         "h1": "Prop Trading Scam: How Fake Prop Firms Steal Challenge Fees",
         "lead": "You paid $99 for a 100k challenge. Passed phase one. Phase two failed at 9.7% profit with one day left — or the firm reset your account, denied your payout, or simply vanished. Prop trading scams are the fastest-growing fraud category we see at Act Here, and the playbook is nearly identical across firms.",
@@ -62,6 +63,7 @@ GUIDES_DATA = [
         "slug": "broker-withdrawal-problem",
         "title": "Broker Withdrawal Problem? Why Your Payout Is Stalled — and How to Unblock It | Act Here",
         "description": "You clicked 'withdraw' and the status flipped to 'pending' — for weeks. Why brokers stall payouts, how to tell slow from scam, and what still works.",
+        "keywords": "broker withdrawal problem, broker not paying out, withdrawal pending broker, cannot withdraw from broker, broker payout stalled",
         "kicker": "Withdrawal problems · Updated November 2026",
         "h1": "Broker Withdrawal Problem? Why Your Payout Is Stalled — and How to Unblock It",
         "lead": "You click 'withdraw', the status flips to 'pending' — and nothing happens for days. Then weeks. Then support stops answering. A broker withdrawal problem is the single most common first symptom of investment fraud, and the way you respond in the next 14 days often decides whether the money comes back.",
@@ -100,6 +102,7 @@ GUIDES_DATA = [
         "slug": "chargeback-failed-investment",
         "title": "Chargeback Failed Investment? Bank, Court & Tracing Options | Act Here",
         "description": "Your bank said no — or the chargeback window already closed. What still works when a chargeback on a failed investment is denied or too late.",
+        "keywords": "chargeback failed investment, investment chargeback, credit card chargeback scam, dispute investment payment",
         "kicker": "Chargeback options · Updated November 2026",
         "h1": "Chargeback Failed Investment? Bank, Court & Tracing Options",
         "lead": "Your bank said no. Or the 120-day window closed while you were still hoping the broker would pay. A failed chargeback feels like the end of the road — but in UK investment-fraud litigation, it is often just the beginning.",
@@ -132,6 +135,7 @@ GUIDES_DATA = [
         "slug": "check-broker-license",
         "title": "Check Broker License: FCA, CySEC, ASIC & SEC Step by Step | Act Here",
         "description": "How to verify a broker's licence on the official FCA, CySEC, ASIC and SEC registers — and the clone-firm tricks that look identical to a real licence.",
+        "keywords": "check broker license, how to verify broker licence, is broker regulated, fake broker licence, broker register check",
         "kicker": "Broker verification · Updated November 2026",
         "h1": "Check Broker License: FCA, CySEC, ASIC & SEC Step by Step",
         "lead": "The broker's website shows an FCA registration number. You Google it — it exists. But the number belongs to a completely different company, and the 'broker' is a clone. Licence verification is the single most-skipped step before depositing, and the single most-faked element of a scam platform.",
@@ -169,6 +173,7 @@ GUIDES_DATA = [
         "slug": "pig-butchering-scam",
         "title": "Pig Butchering Scam Explained: The Romance Scam Crypto Fraud | Act Here",
         "description": "They messaged you on WhatsApp, built trust for weeks, then introduced a 'trading platform'. How pig butchering scams work — and what UK litigation can recover.",
+        "keywords": "pig butchering scam, romance crypto scam, pig butchering crypto, crypto romance fraud, pig butchering what to do",
         "kicker": "Romance + crypto fraud · Updated November 2026",
         "h1": "Pig Butchering Scam Explained: The Romance Scam Crypto Fraud",
         "lead": "They messaged you by 'mistake' on WhatsApp or Telegram. Weeks of friendly chat. Then a casual mention of a trading platform where they 'made 40% last month'. You deposited a little, watched fake profits grow, deposited more — and now the platform won't let you withdraw, and the person who introduced you has vanished.",
@@ -207,6 +212,7 @@ GUIDES_DATA = [
         "slug": "fund-recovery-services",
         "title": "Fund Recovery Services: How to Get Money Back From a Scam Broker | Act Here",
         "description": "Most 'fund recovery' companies are scams themselves. How to tell a real recovery service from a recovery scam — and what legitimate routes actually work.",
+        "keywords": "fund recovery services, investment recovery, scam recovery counsel, recover money from broker scam",
         "kicker": "Recovery scams · Updated November 2026",
         "h1": "Fund Recovery Services: How to Get Money Back From a Scam Broker",
         "lead": "You lost money to a scam broker. Then a 'fund recovery specialist' contacts you — they found you through the same scam's victim list — and guarantees to get your money back. This is often the second scam, and it can be run by the same people as the first.",
@@ -268,7 +274,7 @@ def render_faq(faqs):
     )
     return f'<section style="padding:2.5rem 0"><div class="article-body" style="max-width:760px;margin:0 auto"><span style="display:block;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.6rem">FAQ</span><h2 style="font-family:var(--font-serif);font-size:1.8rem;color:var(--navy);margin-bottom:1.2rem">Frequently asked questions</h2>{items}</div></section>'
 
-def build_faq_schema(slug, faqs, title, description):
+def build_faq_schema(slug, faqs, title, description, keywords=""):
     return {
         "@context": "https://schema.org",
         "@graph": [
@@ -289,6 +295,7 @@ def build_faq_schema(slug, faqs, title, description):
                 "publisher": {"@type": "Organization", "name": "Act Here", "url": "https://act-here.uk/"},
                 "dateModified": "2026-11-16",
                 "inLanguage": "en-GB",
+                **({"keywords": keywords} if keywords else {}),
             },
             {
                 "@type": "FAQPage",
@@ -312,7 +319,7 @@ def render_guide(g):
     slug = g["slug"]
     sections_html = "\n".join(render_section(*s) for s in g["sections"])
     faq_html = render_faq(g["faqs"])
-    schema = build_faq_schema(slug, g["faqs"], g["title"], g["description"])
+    schema = build_faq_schema(slug, g["faqs"], g["title"], g["description"], g.get("keywords", ""))
     schema_json = json.dumps(schema, ensure_ascii=False, indent=1)
     # No broker names on guides: point readers at the searchable review archive instead.
     related_html = '<section style="padding:2rem 0;background:var(--off-white)"><div class="article-body" style="max-width:760px;margin:0 auto"><p style="color:var(--text-muted);font-size:.95rem">Looking for a specific platform? <a href="../reviews/index.html" style="color:var(--sage-dark)">Search our broker review archive</a> — we publish complaint assessments of trading platforms, prop firms and their payout records.</p></div></section>'
@@ -323,6 +330,7 @@ def render_guide(g):
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>{htmlmod.escape(g['title'])}</title>
  <meta name="description" content="{htmlmod.escape(g['description'])}">
+ <meta name="keywords" content="{htmlmod.escape(g.get('keywords', ''))}">
  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
  <link rel="canonical" href="https://act-here.uk/guides/{slug}.html">
  <meta property="og:type" content="article">

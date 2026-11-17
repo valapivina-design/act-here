@@ -18,6 +18,7 @@ PAGES = [
   "card": "Cosa fare subito, a chi rivolgersi e come presentare denuncia.",
   "title": "Truffa online: cosa fare, a chi rivolgersi e come denunciare | Act Here",
   "description": "Truffa online: cosa fare subito, a chi rivolgersi, come presentare denuncia a Polizia Postale o Carabinieri e quali strade esistono per recuperare i soldi.",
+  "keywords": "truffa online, truffa online cosa fare, denunciare truffa online, truffa investimenti online, truffa online a chi rivolgersi",
   "badge": "Truffa online",
   "h1": "Truffa online: cosa fare e a chi rivolgersi",
   "lead": "Hai pagato per un investimento, un servizio o un acquisto che non esisteva, e ora dall'altra parte non risponde più nessuno. La truffa online è di gran lunga la ricerca più frequente in Italia su questi temi. Conta soprattutto una cosa: quanto in fretta ti muovi, perché i termini bancari sono brevi e le prove si perdono.",
@@ -67,6 +68,7 @@ PAGES = [
   "card": "Bonifico, carta, Postepay, PayPal, cripto: le strade per ogni metodo di pagamento.",
   "title": "Recuperare soldi truffa online: bonifico, carta, Postepay, PayPal | Act Here",
   "description": "Recuperare soldi truffati: richiamo del bonifico, chargeback su carta di credito, Postepay, PayPal, criptovalute e azione civile. Cosa è realistico e in che tempi.",
+  "keywords": "recuperare soldi truffa, recupero fondi truffa, soldi truffa online, come recuperare soldi dopo truffa",
   "badge": "Recupero fondi",
   "h1": "Recuperare soldi truffati: le strade possibili, metodo per metodo",
   "lead": "La prima domanda dopo una frode è sempre la stessa: posso riavere il mio denaro? La risposta onesta dipende da due fattori: come hai pagato e quanto tempo è passato. Qui trovi le strade che esistono davvero per recuperare soldi truffa online, con i loro limiti.",
@@ -115,6 +117,7 @@ PAGES = [
   "card": "Come riconoscere un broker truffaldino, cosa conservare e a chi rivolgersi.",
   "title": "Truffa trading online: come riconoscerla e recuperare i soldi | Act Here",
   "description": "Truffa trading online: come riconoscere un broker truffaldino, verificare gli elenchi CONSOB, conservare le prove e a chi rivolgersi per recuperare i soldi.",
+  "keywords": "truffa trading online, broker non autorizzato, truffa broker, piattaforma trading truffa",
   "badge": "Truffa trading",
   "h1": "Truffa trading online: riconoscerla e reagire",
   "lead": "La piattaforma mostrava profitti in crescita. Poi hai chiesto di prelevare e sono cominciati i rinvii, le nuove verifiche, il silenzio. La truffa trading online, compresa la truffa forex, usa broker falsi e schermate costruite per sembrare un vero mercato.",
@@ -166,6 +169,7 @@ PAGES = [
   "card": "Bitcoin e cripto: a chi rivolgersi e cosa è realistico recuperare.",
   "title": "Truffa criptovalute: a chi rivolgersi e come recuperare | Act Here",
   "description": "Truffa criptovalute e truffa bitcoin: a chi rivolgersi, come funziona il tracciamento, cosa fare con un prelievo bloccato e quando serve un avvocato esperto.",
+  "keywords": "truffa criptovalute, truffa bitcoin, truffa crypto, truffa investimenti criptovalute",
   "badge": "Truffa criptovalute",
   "h1": "Truffa criptovalute: a chi rivolgersi e cosa si può recuperare",
   "lead": "Hai inviato bitcoin o stablecoin a una piattaforma o a una persona conosciuta online, e ora il saldo non si può prelevare. Nella truffa criptovalute il trasferimento è definitivo, ma non invisibile: ogni movimento resta su un registro pubblico.",
@@ -205,6 +209,7 @@ PAGES = [
   "card": "Quando serve un legale, cosa fa e come scegliere a chi affidarsi.",
   "title": "Avvocato truffa online: quando serve e cosa può fare | Act Here",
   "description": "Avvocato truffa online: querela, costituzione di parte civile, reclami ad ABF e ACF, azione civile. Quando conviene e come scegliere a chi affidarsi.",
+  "keywords": "avvocato truffa online, avvocato truffa investimenti, assistenza legale truffa online",
   "badge": "Assistenza legale",
   "h1": "Avvocato truffa online: quando serve e cosa può fare",
   "lead": "Dopo la denuncia molti si chiedono se valga la pena coinvolgere un legale. Dipende dall'importo, dal metodo di pagamento e da chi c'è dall'altra parte. Qui trovi cosa fa in concreto un avvocato truffa online e dove si colloca Act Here.",
@@ -238,6 +243,7 @@ PAGES = [
   "card": "Broker non paga o prelievo bloccato: cause possibili e passi da fare.",
   "title": "Problemi prelievo broker: perché non paga e cosa fare | Act Here",
   "description": "Problemi prelievo broker: perché il broker trattiene i fondi, come distinguere un ritardo da una frode e cosa fare se il prelievo è bloccato.",
+  "keywords": "problemi prelievo broker, prelievo bloccato, broker non fa prelevare, prelievo trading bloccato",
   "badge": "Prelievi bloccati",
   "h1": "Problemi prelievo broker: perché non paga e cosa fare",
   "lead": "Hai chiesto il prelievo e lo stato resta in attesa. Passano i giorni, le risposte cambiano, poi smettono di arrivare. Quando un broker non paga, il modo in cui reagisci nelle prime due settimane pesa molto sul risultato.",
@@ -278,6 +284,7 @@ PAGES = [
   "card": "Come funziona il romance scam e cosa fare se hai inviato denaro.",
   "title": "Truffa romance scam: spiegazione, segnali e cosa fare | Act Here",
   "description": "Truffa romance: come funziona il romance scam, quali sono i segnali, cosa prevede la legge e come muoversi per provare a recuperare il denaro inviato.",
+  "keywords": "truffa romance, truffa sentimentale, pig butchering, truffa sentimentale criptovalute",
   "badge": "Truffa sentimentale",
   "h1": "Truffa romance: come funziona e cosa fare",
   "lead": "Una persona conosciuta online, settimane di messaggi quotidiani, poi una richiesta di aiuto o un'occasione di investimento. La truffa romance, detta anche truffa romantica, colpisce persone di ogni età e livello di istruzione. Non c'è nulla di cui vergognarsi, e muoversi presto fa differenza.",
@@ -331,7 +338,7 @@ def faq_html(faqs):
             '<h2 style="font-family:var(--font-serif);font-size:1.8rem;color:var(--navy);margin-bottom:1.2rem">Domande frequenti</h2>'
             f'{items}</div></section>')
 
-def head(title, desc, url, schema=None):
+def head(title, desc, url, schema=None, keywords=""):
     ld = f'\n <script type="application/ld+json">\n{json.dumps(schema, ensure_ascii=False, indent=1)}\n </script>' if schema else ""
     return f"""<!DOCTYPE html>
 <html lang="it">
@@ -340,6 +347,7 @@ def head(title, desc, url, schema=None):
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>{esc(title)}</title>
  <meta name="description" content="{esc(desc)}">
+ <meta name="keywords" content="{esc(keywords)}">
  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
  <link rel="canonical" href="{url}">
  <link rel="alternate" hreflang="it" href="{url}">
@@ -379,7 +387,7 @@ def render(p):
         {"@type": "Article", "headline": p["title"], "description": p["description"],
          "author": {"@type": "Organization", "name": "Act Here"},
          "publisher": {"@type": "Organization", "name": "Act Here", "url": "https://act-here.uk/"},
-         "dateModified": "2026-11-17", "inLanguage": "it"},
+         "dateModified": "2026-11-17", "inLanguage": "it", **({"keywords": p["keywords"]} if p.get("keywords") else {})},
         {"@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faqs"]]},
         {"@type": "BreadcrumbList", "itemListElement": [
@@ -390,7 +398,7 @@ def render(p):
     body = (f'<div class="breadcrumb"><a href="../index.html">Home</a><span>&#8250;</span><a href="index.html">Guide</a><span>&#8250;</span> {esc(p["badge"])}</div>\n'
             f'<div class="page-hero">\n <div class="hero-badge">{esc(p["badge"])} &middot; {UPDATED}</div>\n <h1>{esc(p["h1"])}</h1>\n <p>{esc(p["lead"])}</p>\n</div>\n'
             + "\n".join(render_section(*s) for s in p["sections"]) + "\n" + links_strip() + "\n" + faq_html(p["faqs"]) + "\n" + CTA)
-    return head(p["title"], p["description"], url, schema) + body + FOOT
+    return head(p["title"], p["description"], url, schema, p.get("keywords", "")) + body + FOOT
 
 def render_index():
     cards = "\n".join(

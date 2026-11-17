@@ -21,6 +21,7 @@ PAGES = [
   "card": "Qué hacer en las primeras horas, a quién acudir y cómo denunciar.",
   "title": "Estafa online: qué hacer, a quién acudir y cómo denunciar | Act Here",
   "description": "Estafa online: qué hacer en las primeras horas, a quién acudir, cómo denunciar ante Policía Nacional o Guardia Civil y qué vías existen para recuperar el dinero.",
+  "keywords": "estafa online, estafa online que hacer, denunciar estafa online, estafa inversiones, a quien acudir estafa",
   "badge": "Estafa online",
   "h1": "Estafa online: qué hacer y a quién acudir",
   "lead": "Ha pagado por una inversión, un servicio o una compra que no existía, y al otro lado ya no responde nadie. En una estafa online lo que más pesa es la rapidez: los plazos bancarios son cortos y las pruebas se pierden. Esta guía explica qué hacer primero, dónde denunciar y cómo se pasa de la denuncia a la reclamación del dinero.",
@@ -70,6 +71,7 @@ PAGES = [
   "card": "Transferencia, tarjeta, Bizum, PayPal y cripto: las vías según el medio de pago.",
   "title": "Recuperar dinero estafa online: tarjeta, Bizum, cripto | Act Here",
   "description": "Recuperar dinero estafado: qué vías existen según el medio de pago. Transferencia, tarjeta, Bizum, PayPal y criptomonedas, con plazos y pasos concretos.",
+  "keywords": "recuperar dinero estafa, recuperar dinero estafado, reclamar dinero estafa online",
   "badge": "Recuperar dinero estafado",
   "h1": "Recuperar dinero estafado: las vías según el medio de pago",
   "lead": "Recuperar dinero estafa online no depende de un solo trámite. Depende de cómo pagó, de cuánto tiempo ha pasado y de las pruebas que conserva. Nadie puede garantizar el resultado, pero ordenar el caso por medio de pago permite saber qué vías siguen abiertas.",
@@ -119,6 +121,7 @@ PAGES = [
   "card": "Bróker no regulado, advertencias de la CNMV y cómo reclamar.",
   "title": "Estafa trading y estafa bróker: avisos de la CNMV | Act Here",
   "description": "Estafa trading: cómo funciona, cómo comprobar si un bróker no regulado figura en las advertencias de la CNMV, cómo denunciar y qué vías hay para reclamar.",
+  "keywords": "estafa trading, broker no regulado, estafa broker, plataforma trading estafa",
   "badge": "Estafa trading",
   "h1": "Estafa trading y bróker no regulado: cómo actuar",
   "lead": "La estafa trading sigue casi siempre el mismo guion: un primer depósito pequeño, un panel que muestra beneficios y un retiro que nunca llega. Aquí explicamos cómo funciona, qué dice la CNMV sobre las entidades sin licencia y qué pasos dar si ya ha invertido.",
@@ -161,6 +164,7 @@ PAGES = [
   "card": "Formas habituales, rastreo de fondos y qué pruebas guardar.",
   "title": "Estafa criptomonedas: qué hacer y cómo reclamar | Act Here",
   "description": "Estafa criptomonedas: plataformas falsas, exchanges clonados y grupos de Instagram o Telegram. Cómo se rastrean los fondos y qué opciones hay para reclamar.",
+  "keywords": "estafa criptomonedas, estafa bitcoin, estafa crypto, estafa inversiones cripto",
   "badge": "Estafa criptomonedas",
   "h1": "Estafa criptomonedas: qué hacer y cómo seguir el rastro",
   "lead": "En una estafa criptomonedas el dinero sale de su control en minutos, pero deja un rastro público y permanente. Ese rastro es el punto de partida. Esta guía explica las formas más frecuentes, qué se puede hacer con el rastreo y qué debe conservar desde el primer día.",
@@ -208,6 +212,7 @@ PAGES = [
   "card": "Retiro bloqueado o pendiente: cómo distinguir un control de una negativa.",
   "title": "Mi bróker no me deja retirar: qué hacer | Act Here",
   "description": "Mi bróker no me deja retirar dinero: por qué ocurre, cómo distinguir un control legítimo de una negativa a pagar y qué pasos dar con un retiro bloqueado.",
+  "keywords": "broker no deja retirar, retiro bloqueado broker, no puedo retirar del broker",
   "badge": "Bróker no deja retirar",
   "h1": "Mi bróker no me deja retirar dinero: pasos a seguir",
   "lead": "Ha pedido el retiro y no llega. Soporte responde con plantillas o no responde. Antes de sacar conclusiones conviene distinguir dos situaciones muy distintas, porque los pasos no son los mismos.",
@@ -254,6 +259,7 @@ PAGES = [
   "card": "Qué hace un abogado en estos casos y dónde encaja Act Here.",
   "title": "Abogado estafa online: denuncia, reclamación y acción civil | Act Here",
   "description": "Abogado estafa online: qué hace en la denuncia, la acusación particular, las reclamaciones ante supervisores y la acción civil. Cuándo conviene y cómo elegir.",
+  "keywords": "abogado estafa online, abogado estafa inversiones, asistencia legal estafa",
   "badge": "Abogado estafa online",
   "h1": "Abogado estafa online: qué hace y cuándo conviene",
   "lead": "Después de la denuncia, muchos afectados se preguntan si merece la pena acudir a un abogado. Depende del importe, del medio de pago y de quién esté al otro lado. Aquí explicamos qué hace en concreto un abogado estafa online y dónde encaja Act Here.",
@@ -297,6 +303,7 @@ PAGES = [
   "card": "Pig butchering, apps de citas y vídeos falsos: cómo funciona y qué hacer.",
   "title": "Estafa sentimental criptomonedas y pig butchering | Act Here",
   "description": "Estafa sentimental con criptomonedas: qué es la estafa romance, cómo funciona el pig butchering o matanza del cerdo y qué hacer para denunciar y reclamar.",
+  "keywords": "estafa sentimental criptomonedas, estafa romantica crypto, pig butchering",
   "badge": "Estafa sentimental",
   "h1": "Estafa sentimental con criptomonedas: cómo funciona y qué hacer",
   "lead": "La estafa sentimental criptomonedas combina dos cosas: una relación construida durante semanas y una plataforma de inversión falsa. Quien la sufre no ha sido ingenuo. Ha tratado con personas que se dedican a esto de forma profesional.",
@@ -346,6 +353,7 @@ PAGES = [
   "card": "Comprobaciones de licencia, clones y señales de una plataforma falsa.",
   "title": "Cómo saber si un bróker es fiable y está regulado | Act Here",
   "description": "Cómo saber si un bróker es fiable: cómo comprobar si está regulado en los registros de la CNMV, cómo detectar un clon y cómo identificar una plataforma falsa.",
+  "keywords": "como saber si un broker es fiable, broker fiable, verificar licencia broker",
   "badge": "Bróker fiable",
   "h1": "Cómo saber si un bróker es fiable: comprobaciones antes de invertir",
   "lead": "Cinco minutos de comprobación evitan la mayoría de los problemas. Esta guía explica cómo saber si un bróker es fiable con fuentes oficiales, sin fiarse de lo que la propia web afirma sobre sí misma.",
@@ -409,7 +417,7 @@ def faq_html(faqs):
             '<h2 style="font-family:var(--font-serif);font-size:1.8rem;color:var(--navy);margin-bottom:1.2rem">Preguntas frecuentes</h2>'
             f'{items}</div></section>')
 
-def head(title, desc, url, schema=None):
+def head(title, desc, url, schema=None, keywords=""):
     ld = f'\n <script type="application/ld+json">\n{json.dumps(schema, ensure_ascii=False, indent=1)}\n </script>' if schema else ""
     return f"""<!DOCTYPE html>
 <html lang="es">
@@ -418,6 +426,7 @@ def head(title, desc, url, schema=None):
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>{esc(title)}</title>
  <meta name="description" content="{esc(desc)}">
+ <meta name="keywords" content="{esc(keywords)}">
  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
  <link rel="canonical" href="{url}">
  <link rel="alternate" hreflang="es" href="{url}">
@@ -457,7 +466,7 @@ def render(p):
         {"@type": "Article", "headline": p["title"], "description": p["description"],
          "author": {"@type": "Organization", "name": "Act Here"},
          "publisher": {"@type": "Organization", "name": "Act Here", "url": "https://act-here.uk/"},
-         "dateModified": "2026-11-17", "inLanguage": "es"},
+         "dateModified": "2026-11-17", "inLanguage": "es", **({"keywords": p["keywords"]} if p.get("keywords") else {})},
         {"@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faqs"]]},
         {"@type": "BreadcrumbList", "itemListElement": [
@@ -468,7 +477,7 @@ def render(p):
     body = (f'<div class="breadcrumb"><a href="../index.html">Inicio</a><span>&#8250;</span><a href="index.html">Guías</a><span>&#8250;</span> {esc(p["badge"])}</div>\n'
             f'<div class="page-hero">\n <div class="hero-badge">{esc(p["badge"])} &middot; {UPDATED}</div>\n <h1>{esc(p["h1"])}</h1>\n <p>{esc(p["lead"])}</p>\n</div>\n'
             + "\n".join(render_section(*s) for s in p["sections"]) + "\n" + links_strip() + "\n" + faq_html(p["faqs"]) + "\n" + CTA)
-    return head(p["title"], p["description"], url, schema) + body + FOOT
+    return head(p["title"], p["description"], url, schema, p.get("keywords", "")) + body + FOOT
 
 def render_index():
     cards = "\n".join(
