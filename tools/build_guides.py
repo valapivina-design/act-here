@@ -209,13 +209,12 @@ GUIDES_DATA = [
         "description": "Most 'fund recovery' companies are scams themselves. How to tell a real recovery service from a recovery scam — and what legitimate routes actually work.",
         "kicker": "Recovery scams · Updated November 2026",
         "h1": "Fund Recovery Services: How to Get Money Back From a Scam Broker",
-        "lead": "You lost money to a scam broker. Then a 'fund recovery specialist' contacts you — they found you through the same scam's victim list — and promises to get your money back for an upfront fee. This is the second scam, and it is often run by the same people as the first.",
+        "lead": "You lost money to a scam broker. Then a 'fund recovery specialist' contacts you — they found you through the same scam's victim list — and guarantees to get your money back. This is often the second scam, and it can be run by the same people as the first.",
         "sections": [
             ("The recovery scam", "How fake fund recovery services work", [
                 ("ul", [
                     "They contact you — you never contacted them. Real recovery firms don't cold-call victims.",
                     "They guarantee recovery, or quote a success rate above 90%. No honest investigator guarantees anything.",
-                    "They demand an upfront fee before any work begins, often framed as a 'refundable deposit' or 'court fee'.",
                     "They claim to have 'inside contacts' at banks or regulators, or to have 'already located' your funds.",
                     "They pressure you to act immediately, before you have time to verify them.",
                 ]),
@@ -228,7 +227,7 @@ GUIDES_DATA = [
                 ("h3", "Civil litigation"),
                 ("p", "A UK civil claim for fraud or breach of contract is available for up to 6 years. For amounts over £10,000, litigation counsel is the realistic route. For multi-victim platforms, coordinated claims change the economics and the regulator's attention."),
             ]),
-            ("How to verify a recovery service", "The three checks before you pay anyone", [
+            ("How to verify a recovery service", "The three checks before you instruct anyone", [
                 ("ul", [
                     "Did they contact you, or did you contact them? Real firms don't cold-call.",
                     "Do they guarantee recovery? No honest investigator does — the answer should be 'we assess, then we tell you what's realistic'.",
@@ -238,7 +237,7 @@ GUIDES_DATA = [
         ],
         "faqs": [
             ("Are fund recovery services legitimate?", "Some are — but the industry is saturated with scams. The test: did they contact you (red flag), do they guarantee recovery (red flag), and can you verify their company registration and litigation counsel independently (essential). Act Here is UK litigation counsel — we don't cold-call, and we don't guarantee outcomes."),
-            ("How much does fund recovery cost?", "Legitimate services work on a consultation basis, then a fee structure tied to the actual work: a fixed fee for a case assessment, then either hourly or a success-based percentage for the recovery work itself. Any demand for a large upfront 'refundable deposit' before any work is done is a red flag."),
+            ("How much does fund recovery cost?", "At Act Here the first consultation is free. We use it to validate your claim: what happened, what evidence exists, and which routes are realistic. Any work beyond that is agreed with you in writing before it starts."),
             ("Can I get my money back from a scam broker?", "Sometimes. The realistic routes are card chargeback (within 120 days), bank recall (within days), crypto tracing (permanent trail), and civil litigation (6-year limitation). The odds drop every week — which is why the first move is to preserve evidence and get a professional assessment while every route is still open."),
         ],
         "related": [],

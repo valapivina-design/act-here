@@ -95,7 +95,7 @@ PAGES = [
      "Ti hanno contattato loro? Un operatore serio non chiama le vittime.",
      "Promettono il risultato? Nessuno può garantire il recupero.",
      "Sono verificabili? Controlla ragione sociale, sede e, per gli avvocati, l'iscrizione all'albo.",
-     "Ti spiegano per iscritto quali passi faranno e con quali costi, prima di iniziare?",
+     "Ti spiegano per iscritto quali passi faranno, prima di iniziare?",
     ]),
    ]),
    ("Se la banca dice no", "Reclamo e Arbitro Bancario Finanziario", [
@@ -228,7 +228,7 @@ PAGES = [
   ],
   "faqs": [
    ("Serve un avvocato per presentare denuncia?", "No, puoi farlo da solo. Un legale è utile per una querela completa e, soprattutto, per le azioni che riguardano il denaro."),
-   ("Quanto costa un avvocato per una truffa online?", "Dipende dal lavoro richiesto. Chiedi sempre un preventivo scritto prima di iniziare. In Act Here onorari e ambito dell'incarico sono definiti in una lettera di incarico prima di ogni attività."),
+   ("Quanto costa un avvocato per una truffa online?", "In Act Here la prima consulenza è gratuita. Serve a verificare il tuo caso: cosa è successo, quali prove esistono e quali strade sono realistiche. Ogni attività successiva viene concordata per iscritto prima di iniziare."),
    ("Un avvocato può garantire il recupero dei soldi?", "No. Chi promette il risultato non è affidabile. Si possono valutare le strade realistiche e i loro costi."),
    ("Meglio un avvocato vicino a casa?", "Conta più l'esperienza specifica della distanza: questi casi coinvolgono banche, piattaforme e soggetti esteri e si gestiscono in gran parte a distanza."),
   ],
@@ -263,7 +263,7 @@ PAGES = [
      "Contatta la banca per le procedure di richiamo e contestazione e fai valutare il caso.",
     ]),
     ("h3", "Commissioni nascoste prelievo: cosa fare se compaiono costi non previsti"),
-    ("p", "Chiedi il riferimento contrattuale per iscritto e non decidere da solo. Verifica l'intermediario sugli albi ufficiali e fai valutare la richiesta da un legale, insieme al resto della documentazione."),
+    ("p", "Chiedi per iscritto il riferimento contrattuale, verifica l'intermediario sugli albi ufficiali e fai valutare la documentazione da un legale."),
    ]),
   ],
   "faqs": [
@@ -316,7 +316,7 @@ PAGES = [
 ]
 
 CHARS_BANNED = "\u2014\u2013\u201e\u201c\u201d\u2018\u2019"
-WORDS_BANNED = re.compile(r"sblocc|\btass[ae]\b|svincol|gratuit|gratis", re.I)
+WORDS_BANNED = re.compile(r"sblocc|\btass[ae]\b|svincol|anticip|acconto|caparra", re.I)
 
 def links_strip():
     links = " &middot; ".join(f'<a href="{p["slug"]}.html" style="color:var(--sage-dark)">{esc(p["badge"])}</a>' for p in PAGES)
@@ -366,7 +366,7 @@ CTA = """<section style="padding:3rem 0;background:var(--navy);color:#fff;text-a
  <div style="max-width:640px;margin:0 auto;padding:0 5%">
  <h2 style="font-family:var(--font-serif);color:#fff;font-size:1.9rem;margin-bottom:.8rem">Hai perso denaro? Fai valutare il caso.</h2>
  <p style="color:rgba(255,255,255,.75);margin-bottom:1.5rem">Consulenza riservata con il nostro team di contenzioso. Non ci limitiamo a negoziare: siamo pronti ad agire in giudizio.</p>
- <a href="../pages/contact.html" class="btn-primary">Prenota una consulenza</a>
+ <a href="../pages/contact.html" class="btn-primary">Prenota una consulenza gratuita</a>
  </div>
 </section>
 """
