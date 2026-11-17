@@ -54,9 +54,9 @@ const FOOTER_HTML = `
  <div class="footer-grid">
  <div class="footer-brand">
  <a href="index.html" class="nav-logo">Act<span>Here</span></a>
- <p>United Kingdom litigation counsel for commercial, consumer, and complex dispute matters. Clear strategy. Transparent fees. Disciplined advocacy.</p>
+ <p>United Kingdom litigation counsel for commercial, consumer, and complex dispute matters. Clear strategy. Free consultation. Disciplined advocacy.</p>
  <p class="footer-address">25 Cabot Square<br>London, E14 4QZ</p>
- <div class="footer-badge">UK Litigation · Transparent Fees · Free Consultation</div>
+ <div class="footer-badge">UK Litigation · Free Consultation</div>
  <div class="footer-social" aria-label="Social links">
  <a href="#" aria-label="LinkedIn">in</a>
  <a href="#" aria-label="Facebook">f</a>

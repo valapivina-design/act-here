@@ -81,7 +81,7 @@
  </div>
 </section>
 
-<!-- 4. TRANSPARENT PRICING + CALCULATOR -->
+<!-- 4. FREE CONSULTATION -->
 <section class="pricing-section section-full" style="padding-left:5%;padding-right:5%;">
  <div class="pricing-grid">
  <div class="pricing-copy reveal">
@@ -93,35 +93,10 @@
  <li>Initial consultation scheduled promptly so you can decide with full information, not pressure.</li>
  </ul>
  </div>
- <div class="calc-box reveal" id="price-calculator">
- <h3>Price Calculator</h3>
- <div class="calc-field">
- <label for="services-needed">Services Needed, <span id="services-label">2</span></label>
- <input type="range" id="services-needed" min="1" max="5" value="2" step="1">
- </div>
- <div class="calc-field">
- <label for="business-size">Business Size</label>
- <select id="business-size">
- <option value="1">Solo / Startup</option>
- <option value="1.35" selected>Small Business</option>
- <option value="1.75">Mid-Market</option>
- <option value="2.2">Enterprise</option>
- </select>
- </div>
- <div class="calc-field">
- <label for="complexity">Complexity Level</label>
- <select id="complexity">
- <option value="1">Straightforward</option>
- <option value="1.5" selected>Moderate</option>
- <option value="2.1">Complex</option>
- <option value="2.8">High-stakes / Multi-party</option>
- </select>
- </div>
- <div class="calc-estimate">
- <span>Estimated Price</span>
- <strong id="price-range">£2,400, £4,800</strong>
- </div>
- <a href="pages/contact.html" class="btn-sage">Get Started</a>
+ <div class="calc-box reveal">
+ <h3>Start With a Free Consultation</h3>
+ <p style="font-size:.95rem;color:var(--text-2);line-height:1.65;margin-bottom:1.4rem;">Tell us what happened and send the documents you have. We will tell you candidly whether the claim is worth pursuing.</p>
+ <a href="pages/contact.html" class="btn-sage">Book Free Consultation</a>
  </div>
  </div>
 </section>
@@ -150,7 +125,7 @@
  </div>
  </div>
  <div class="stars" aria-label="5 stars">★★★★★</div>
- <blockquote>“We needed IP counsel that understood both brand value and courtroom reality. The team delivered both, and stayed transparent on fees throughout.”</blockquote>
+ <blockquote>“We needed IP counsel that understood both brand value and courtroom reality. The team delivered both.”</blockquote>
  </article>
  <article class="testimonial-card">
  <div class="testimonial-head">
@@ -198,27 +173,6 @@
 <script src="js/layout.js"></script>
 <script>
 (function () {
- const services = document.getElementById('services-needed');
- const size = document.getElementById('business-size');
- const complexity = document.getElementById('complexity');
- const out = document.getElementById('price-range');
- const label = document.getElementById('services-label');
-
- function format(n) {
- return '£' + Math.round(n).toLocaleString('en-GB');
- }
- function update() {
- const base = 1200;
- const s = Number(services.value);
- const mult = Number(size.value) * Number(complexity.value);
- const low = base * s * mult;
- const high = low * 1.85;
- label.textContent = s;
- out.textContent = format(low) + ', ' + format(high);
- }
- [services, size, complexity].forEach(el => el.addEventListener('input', update));
- update();
-
  const track = document.getElementById('testimonials-track');
  const dots = [...document.querySelectorAll('#testimonial-dots span')];
  document.getElementById('testimonial-prev').addEventListener('click', () => {
