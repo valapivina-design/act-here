@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
 Rewrite review titles to:
-  <Brand> Review - Complaints, Warnings & How to Report | Act Here
-Updates og:title and schema headline/name to match. Leaves H1/verdict body as-is.
-Idempotent: skips pages already on the target title.
+  <Name> Review 2026 — Is <Name> a Scam? {middle} | Act Here
+Updates og:title, H1, and schema. Idempotent.
 """
 import os, re, json, html as htmlmod, sys
 
@@ -19,8 +18,15 @@ def brand_from_h1(html_text):
     return m.group(1).strip()
 
 def make_title(brand):
-    # Title pattern requested: {Brand} Review - Complaints, Warnings & How to Report
-    return f"{brand} Review - Complaints, Warnings & How to Report" + TITLE_SUFFIX
+    # {Name} Review 2026 — Is {Name} a Scam? {middle} | Act Here
+    em = "—"
+    long_mid = "Complaints, Warnings & How to Report"
+    short_mid = "Complaints & Warnings"
+    base = f"{brand} Review 2026 {em} Is {brand} a Scam?"
+    full_long = f"{base} {long_mid}{TITLE_SUFFIX}"
+    if len(full_long) <= 80:
+        return full_long
+    return f"{base} {short_mid}{TITLE_SUFFIX}"
 
 def esc(s):
     return htmlmod.escape(s, quote=True)
@@ -37,8 +43,8 @@ def rewrite(path):
         else:
             return "skip-nobrand"
     new_title = make_title(brand)
-    # Keep existing H1/verdict structure; only title/og/schema follow the complaints pattern
-    new_h1 = None
+    em = "—"
+    new_h1 = f"{brand} Review {em} Is {brand} a Scam?"
     og_title = new_title
     mtitle = re.search(r"<title>([^<]*)</title>", src)
     if mtitle and htmlmod.unescape(mtitle.group(1)) == new_title:
@@ -71,7 +77,10 @@ def rewrite(path):
         out, count=1,
     )
 
-    # 4. Inject "Do these 4 things today" before FAQ if missing.
+    # 4. <h1>
+    out = re.sub(r"<h1>[^<]*</h1>", f"<h1>{esc(new_h1)}</h1>", out, count=1)
+
+    # 5. Inject "Do these 4 things today" before FAQ if missing.
     if "do these 4 things today" not in out.lower():
         four_things = f"""
  <h2>If {brand} has your money: do these 4 things today</h2>
