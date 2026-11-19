@@ -96,6 +96,7 @@ const FOOTER_HTML = `
         <li><a href="de/index.html">Deutsch</a></li>
         <li><a href="it/index.html">Italiano</a></li>
         <li><a href="es/index.html">Español</a></li>
+        <li><a href="ar/index.html">العربية</a></li>
         <li><a href="de/krypto-betrug.html">Krypto-Betrug</a></li>
         <li><a href="de/broker-betrug.html">Broker Betrug</a></li>
       </ul>
@@ -334,6 +335,36 @@ const COMMENT_UI = {
   supportRole: 'Supporto',
   ctaFallback: 'Prenota una consulenza gratuita →',
   gotcha: 'Lasciare vuoto'
+ },
+ ar: {
+  heading: 'التعليقات وآراء القراء',
+  leadReview: 'تعليقات حول مشكلات متعلقة بـ {topic}. قد يرد فريقنا عندما يبدو الضرر جوهريا ويمكن أن تفيد استشارة سرية. <a href="#submit-for-review">أرسل للمراجعة</a> - تخضع التعليقات الجديدة للإشراف قبل النشر.',
+  leadGuide: 'تعليقات من قراء يواجهون مواقف مشابهة لهذا الدليل. قد يرد فريقنا عندما يبدو الضرر جوهريا ويمكن أن تفيد استشارة سرية. <a href="#submit-for-review">أرسل للمراجعة</a> - تخضع التعليقات الجديدة للإشراف قبل النشر.',
+  empty: 'لا توجد تعليقات عامة على هذه الصفحة بعد.',
+  formHeading: 'اترك تعليقا',
+  formLeadReview: 'شارك تجربتك مع {topic}. <strong>جميع التعليقات تخضع للإشراف</strong> قبل النشر. البريد والهاتف للمتابعة فقط و<strong>لا يُنشران</strong>.',
+  formLeadGuide: 'شارك تجربتك حول هذا الموضوع. <strong>جميع التعليقات تخضع للإشراف</strong>. البريد والهاتف للمتابعة فقط و<strong>لا يُنشران</strong>. يمكنك ذكر اسم الوسيط في الاستشارة المجانية.',
+  name: 'الاسم',
+  email: 'البريد الإلكتروني',
+  phone: 'الهاتف',
+  notPublished: '(لا يُنشر)',
+  subject: 'الموضوع',
+  comment: 'التعليق',
+  namePh: 'اسمك',
+  emailPh: 'you@example.com',
+  phonePh: 'رقم الهاتف',
+  subjectPh: 'موضوع مختصر',
+  bodyPh: 'صف ما حدث. التواريخ وطريقة الدفع تساعد.',
+  countryCode: 'رمز الدولة',
+  privacy: 'بإرسال النموذج توافق على أن نتواصل معك بشأن هذا البلاغ. نقرر أي التعليقات تُنشر. راجع <a href="{privacy}">سياسة الخصوصية</a>.',
+  submit: 'إرسال التعليق',
+  sending: 'جاري الإرسال…',
+  thanks: 'شكرا. استلمنا تعليقك وسيُراجع قبل النشر.',
+  errSubmit: 'تعذر إرسال التعليق. حاول مرة أخرى بعد قليل.',
+  errNetwork: 'لا رد من خدمة النموذج. حاول مرة أخرى أو راسل hello@act-here.uk.',
+  supportRole: 'الدعم',
+  ctaFallback: 'احجز استشارة مجانية →',
+  gotcha: 'اتركه فارغا'
  }
 };
 
@@ -345,8 +376,8 @@ function getCommentPageContext() {
   const topic = (h1 ? h1.textContent : file).replace(/\s*Review\s*$/i, '').trim() || file;
   return { kind: 'review', slug: file, dbKey: file, lang: 'en', topic: topic, leadSource: 'act-here-review-comment' };
  }
- // Guide pages: /guides/*.html, /de|it|es/*.html (exclude index)
- const m = path.match(/\/(guides|de|it|es)\/([^/]+)\.html$/i);
+ // Guide pages: /guides/*.html, /de|it|es|ar/*.html (exclude index)
+ const m = path.match(/\/(guides|de|it|es|ar)\/([^/]+)\.html$/i);
  if (!m) return null;
  const folder = m[1].toLowerCase();
  const stem = m[2];
@@ -400,7 +431,7 @@ function loadCommentScript(src, attr, go) {
 function formatCommentDate(iso, lang) {
  try {
   const d = new Date(iso + 'T12:00:00');
-  const loc = lang === 'de' ? 'de-DE' : lang === 'es' ? 'es-ES' : lang === 'it' ? 'it-IT' : 'en-GB';
+  const loc = lang === 'de' ? 'de-DE' : lang === 'es' ? 'es-ES' : lang === 'it' ? 'it-IT' : lang === 'ar' ? 'ar' : 'en-GB';
   return d.toLocaleDateString(loc, { day: 'numeric', month: 'short', year: 'numeric' });
  } catch (e) { return iso || ''; }
 }

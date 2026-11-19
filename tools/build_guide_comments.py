@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build topic-fitting comments for EN/DE/IT/ES guide pages.
+"""Build topic-fitting comments for EN/DE/IT/ES/AR guide pages.
 
 Writes js/guide_comments.js keyed by path stem (e.g. guides/prop-trading-scam,
 de/broker-betrug). No broker names. Free-consultation support replies only.
@@ -48,6 +48,7 @@ COUNTRIES = {
     "de": ["Germany", "Austria", "Switzerland", "Germany", "Austria"],
     "es": ["Spain", "Mexico", "Chile", "Colombia", "Spain", "Mexico"],
     "it": ["Italy", "Italy", "Switzerland", "Italy"],
+    "ar": ["United Arab Emirates", "Saudi Arabia", "Kuwait", "Egypt", "Qatar", "Bahrain"],
 }
 
 
@@ -103,6 +104,11 @@ SUPPORT = {
         "Prenoti una consulenza gratuita. Dobbiamo validare il caso; la fattibilita dipende dal livello di prova.",
         "Possiamo esaminarlo in confidenza. La consulenza e gratuita: validiamo il caso e indichiamo passi realistici dalle prove.",
     ],
+    "ar": [
+        "الاستشارة مجانية. أولا نتحقق من صحة المطالبة ثم نقيّم الآفاق والجدوى حسب مستوى الإثبات.",
+        "احجز استشارة مجانية. نحتاج التحقق من المطالبة؛ الجدوى تعتمد على مستوى الإثبات.",
+        "يمكن مراجعة الحالة بسرية. الاستشارة مجانية: نتحقق من المطالبة ونحدد خطوات واقعية من أدلتك.",
+    ],
 }
 
 CTA = {
@@ -110,6 +116,7 @@ CTA = {
     "de": "Kostenlose Beratung buchen →",
     "es": "Reserve una consulta gratuita →",
     "it": "Prenota una consulenza gratuita →",
+    "ar": "احجز استشارة مجانية →",
 }
 
 
@@ -141,6 +148,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("La verifica riparte ogni volta", "Ogni documento viene detto incompleto. Il saldo e a schermo ma non esce. Cerco una prima lettura riservata.", True, False),
             ("La banca vuole una cronologia piu chiara", "Per la contestazione chiedono date e screenshot. Ne ho quasi tutti. Qualcuno puo aiutare a ordinare il fascicolo?", True, False),
         ],
+        "ar": [('السحب متوقف منذ أسابيع', 'طلبت سحب رصيد كبير والدعم يرسل قوائم مستندات جديدة فقط. الرصيد يظهر في الحساب. هل تستحق الاستشارة المجانية قبل مراجعة البنك وحدي؟', True, True), ('سحب تجريبي نجح ثم لا شيء', 'خرج مبلغ صغير مرة. الطلب الحقيقي معلق بأعذار متغيرة. حفظت المحادثات والمراجع. من يقيّم إن كان المسار القانوني واقعيا؟', True, True), ('التحقق يعاد من الصفر', 'كل مستند يُرفض ويُطلب غيره. الرصيد ظاهر والسحب لا يتم. أبحث عن مراجعة هادئة للخطوة التالية.', True, False), ('البنك يطلب جدولا أوضح', 'للاعتراض يريد البنك تواريخ ولقطات. لدي معظمها. هل يمكن توجيه ترتيب الملف؟', True, False)],
     },
     "recovery": {
         "en": [
@@ -167,6 +175,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("Screenshot e tracce bancarie pronti", "Ho chat, riferimenti di pagamento e note sul dominio. Act Here puo esaminare in privato se ha senso una via civile?", True, True),
             ("Denuncia fatta, soldi ancora fuori", "Il percorso penale e avviato. Mi servono le opzioni civili spiegate in base al livello di prova.", True, False),
         ],
+        "ar": [('أحتاج محاميا لا وعود استرداد', 'خسرت مبلغا جوهريا في عرض تداول. أريد التحقق من المطالبة ومعرفة الجدوى من أدلتي دون ضغط تجاري.', True, True), ('كيف تقيّمون الآفاق؟', 'قبل أي توكيل: هل الاستشارة مجانية وهل تتحققون أولا إن كانت الأدلة تكفي لمسار واقعي؟', True, False), ('الأدلة جاهزة', 'محادثات وإيصالات وملاحظات النطاق جاهزة. هل يراجع Act Here بهدوء إن كان المسار المدني مناسبا؟', True, True), ('بلاغ قُدّم والمال لا يزال خارجا', 'المسار الجنائي بدأ. أحتاج شرح الخيارات المدنية حسب مستوى الإثبات.', True, False)],
     },
     "license": {
         "en": [
@@ -193,6 +202,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("Ricerca nel registro a vuoto", "Ho cercato nel registro ufficiale con nome commerciale e dominio esatti. Niente. Basta per fermarsi e chiedere consiglio?", True, False),
             ("Checklist breve per la famiglia", "Parenti stavano per versare sulla stessa proposta. Cerco un controllo licenza sintetico da condividere senza nominare il sito qui.", True, False),
         ],
+        "ar": [('رقم الترخيص على الموقع غريب', 'التذييل يعرض رقما لا يطابق الاسم في السجل. كيف أوثّق ذلك قبل إيداع المزيد؟', True, False), ('موقع مقلد استخدم شارة شركة حقيقية', 'لقطات لترخيص يخص جهة أخرى. أرسلت مبلغا صغيرا. هل تستحق استشارة مجانية؟', True, True), ('البحث في السجل بلا نتيجة', 'بحثت بالاسم والنطاق الرسمي. لا شيء. هل يكفي للتوقف وطلب توجيه؟', True, False), ('قائمة تحقق للعائلة', 'أقارب كادوا يمولون نفس العرض. أحتاج خطوات تحقق مختصرة دون ذكر الموقع هنا.', True, False)],
     },
     "chargeback": {
         "en": [
@@ -219,6 +229,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("Bonifico, non carta", "Gran parte e andata con bonifico, quindi chargeback limitato. Quali altre vie dipendono dalla qualita delle prove?", True, True),
             ("Rimborso parziale poi silenzio", "E arrivato un piccolo storno, poi silenzio. Il resto e rilevante. Prossimo passo?", True, False),
         ],
+        "ar": [('الجهة المصدرة أغلقت النزاع بسرعة', 'رفض اعتراض البطاقة. لدي المحادثات ووصف العملية. هل يمكن تقوية الملف؟', True, True), ('المهلة تكاد تنتهي', 'ما زلت ضمن المهلة والبنك يريد جدولا أدق. استشارة مجانية لترتيب الأدلة؟', True, False), ('تحويل لا بطاقة', 'معظم المبلغ تحويل بنكي. ما المسارات الأخرى حسب جودة الإثبات؟', True, True), ('استرداد جزئي ثم صمت', 'عادت منصة صغيرة ثم توقف الرد. المتبقي جوهري. الخطوة التالية؟', True, False)],
     },
     "pig": {
         "en": [
@@ -245,6 +256,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("Indirizzi wallet e TXID salvati", "Ho riferimenti on-chain e la chat del finto supporto. Cerco un esame riservato delle opzioni civili.", True, True),
             ("Un familiare e ancora nella chat", "Continua a ricevere messaggi di pressione. Serve un linguaggio chiaro su come documentare e quando chiedere assistenza.", True, False),
         ],
+        "ar": [('دردشة عاطفية دفعتني لإيداعات كريبتو', 'أشهر من الرسائل ثم ضغط لتمويل تطبيق تداول. السحب لم يصل. لدي تصدير المحادثة. استشارة مجانية؟', True, True), ('طلبوا مزيدا لإثبات الأرباح', 'نمط ذبح الخنازير. توقفت عن الإرسال. ما أهم الأدلة لتقييم الآفاق؟', True, False), ('عناوين محافظ وTXID محفوظة', 'مراجع على السلسلة ودردشة الدعم الوهمي. أبحث عن مراجعة سرية للخيارات المدنية.', True, True), ('قريب لا يزال في المحادثة', 'يستمر الضغط. أحتاج لغة واضحة للتوثيق ومتى أطلب استشارة.', True, False)],
     },
     "prop": {
         "en": [
@@ -271,6 +283,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("La societa e sparita dopo le fee", "Discord e supporto muti. Pagamento carta in archivio. Quale livello di prova serve per una prima lettura?", True, False),
             ("Piu account falliti, stesso schema", "Tre challenge, regole cambiate in ritardo. Serve capire se passi coordinati sono realistici.", True, False),
         ],
+        "ar": [('اجتزت التحدي ورُفض الدفع', 'القواعد بدت واضحة عند الدفع. بعد النجاح ظهرت شروط جديدة. لقطات وشروط محفوظة. استشارة مجانية؟', True, True), ('قاعدة الاتساق ظهرت عند الدفع فقط', 'لم تكن في الشروط الموقعة. رسم التحدي ضاع. هل يستحق التحقق من المطالبة؟', True, True), ('الشركة اختفت بعد الرسوم', 'دعم وديسكورد صامتان. دفع بطاقة مسجل. ما مستوى الإثبات للمراجعة الأولى؟', True, False), ('حسابات عدة بنفس النمط', 'ثلاثة تحديات وتغيير قواعد متأخر. هل خطوات منسقة واقعية؟', True, False)],
     },
     "broker": {
         "en": [
@@ -297,6 +310,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("Questo schema basta per incaricare un legale?", "Ho prove di pagamento e una cronologia breve. Prima verificate la fattibilita dal livello di prova?", True, False),
             ("Un parente stava per aprire il conto", "Stessa proposta della mia. Condivido questa guida. C'e una checklist breve prima di inviare soldi?", True, False),
         ],
+        "ar": [('المنصة بدت مرخصة ثم توقف السحب', 'شارات تسويقية ثم سحب متوقف بقصص متغيرة. روابط ومحادثات محفوظة. استشارة مجانية للتحقق؟', True, True), ('اتصال بارد لمزيد من الإيداع', 'ضغط بعد أرباح على الشاشة. الدعم يتجاهل السحب. الملف جاهز.', True, True), ('هل يكفي هذا النمط للتوكيل؟', 'إثباتات دفع وجدول مختصر. هل تتحققون أولا من الجدوى حسب الإثبات؟', True, False), ('قريب كاد يفتح حسابا', 'نفس العرض. أشارك هذا الدليل. هل توجد قائمة تحقق قبل الإرسال؟', True, False)],
     },
     "crypto": {
         "en": [
@@ -323,6 +337,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("Quanto dettaglio on-chain serve?", "Prima di prenotare: consulenza gratuita e prospettive dal livello di prova  -  corretto?", True, False),
             ("Pagamenti misti carta e crypto", "Parte carta, parte on-chain. Serve ordinare quali vie stanno con quali prove.", True, False),
         ],
+        "ar": [('أرسلت USDT ثم اختفى الدعم', 'لدي TXID ودردشة تطلب مزيدا. استشارة مجانية حول التتبع والمسار المدني؟', True, True), ('واجهة منصة وهمية برصيد متزايد', 'لم أستطع السحب لمحفظتي. لقطات محفوظة. التحقق من المطالبة؟', True, True), ('كم من تفاصيل السلسلة تحتاجون؟', 'قبل الحجز: الاستشارة مجانية وتقييم الآفاق حسب الإثبات - صحيح؟', True, False), ('مدفوعات مختلطة بطاقة وكريبتو', 'جزء بطاقة وجزء على السلسلة. أحتاج ترتيب المسارات حسب الأدلة.', True, False)],
     },
     "report": {
         "en": [
@@ -349,6 +364,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("Pagamenti cross-border", "Pagato da un paese verso un desk estero. Quali vie di segnalazione restano utili insieme all'assistenza?", True, False),
             ("Preferisco non pubblicare dettagli", "Posso condividere in privato. Commento moderato o consulenza diretta?", True, False),
         ],
+        "ar": [('أين أبلغ أولا؟', 'لدي جدول واضح. البنك والجهة الرقابية قبل الاستشارة المجانية أم يمكن ترتيب الاثنين؟', True, False), ('أبلغت وأحتاج قراءة مدنية', 'البلاغ قُدّم. المال خارج. أريد التحقق من الآفاق المدنية حسب أدلتي.', True, True), ('مدفوعات عبر الحدود', 'دفعت من بلد لمكتب في الخارج. أي مسارات إبلاغ تبقى مفيدة مع الاستشارة؟', True, False), ('أفضل عدم نشر التفاصيل', 'يمكن المشاركة بسرية. تعليق خاضع للإشراف أم استشارة مباشرة؟', True, False)],
     },
     "lawyer": {
         "en": [
@@ -375,6 +391,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("Il fascicolo prove va ordinato", "Email, TXID, PDF bancari. Chi aiuta a decidere cosa basta per l'incarico?", True, True),
             ("Una chat di 'recovery' precedente non convinceva", "Ho smesso di rispondere. Voglio un quadro legale serio e un esame riservato.", True, False),
         ],
+        "ar": [('أبحث عن محامي تقاضي لا مركز اتصال', 'خسارة جوهرية من احتيال إلكتروني. أحتاج التحقق من المطالبة وشرح الجدوى من الإثبات، باستشارة أولى مجانية.', True, True), ('هل تعملون إن كنت خارج المملكة المتحدة؟', 'مدفوعات ومحادثات جاهزة. هل الاستشارة المجانية منطقية لوقائع عبر الحدود؟', True, False), ('حزمة أدلة تحتاج ترتيبا', 'رسائل وTXID وملفات بنكية. من يساعد في تقرير ما يكفي للتوكيل؟', True, True), ('دردشة استرداد سابقة لم تقنعني', 'توقفت عن الرد. أريد إطارا قانونيا جديا ومراجعة هادئة.', True, False)],
     },
     "online": {
         "en": [
@@ -401,6 +418,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("Prelievo piccolo all'inizio, poi blocco", "Hanno fatto uscire un importo minimo. Quello grande non si e mosso. Stessa storia di questa guida.", True, True),
             ("Servono passi successivi chiari", "Niente garanzie. Fattibilita in base al livello di prova.", True, False),
         ],
+        "ar": [('عرض استثمار إلكتروني أفرغ الحساب', 'تواصل بارد ثم إيداعات دون سحب. الجدول والأدلة جاهزة. استشارة مجانية؟', True, True), ('ماذا أحفظ الليلة؟', 'ما زال لدي جزء من المحادثات. قائمة أولويات قبل تغيير كلمات المرور؟', True, False), ('سحب صغير ثم حظر', 'سمحوا بمبلغ ضئيل. الكبير لم يتحرك. نفس قصة هذا الدليل.', True, True), ('أحتاج خطوات تالية واضحة', 'بدون ضمانات. الجدوى حسب مستوى إثباتي.', True, False)],
     },
     "authorities": {
         "en": [
@@ -427,6 +445,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("Ricevuta automatica, niente referente ancora", "Segnalazione di settimane fa. Soldi fuori. Cos'altro e realistico?", True, True),
             ("Documenti in un'altra lingua", "Lettere banca non in italiano. Blocca una prima lettura?", True, False),
         ],
+        "ar": [('أي جهة حسب وسيلة الدفع؟', 'بطاقة وكريبتو معا. خريطة مختصرة قبل الاستشارة المجانية.', True, False), ('مسودة شكوى للرقابة جاهزة', 'يمكن التقديم، لكني أريد معرفة إن كان المسار المدني يسير بالتوازي حسب الأدلة.', True, True), ('إيصال آلي دون محقّق بعد', 'بلاغ منذ أسابيع. المال خارج. ما الواقعي أيضا؟', True, True), ('مستندات بلغة أخرى', 'خطابات البنك ليست بالعربية. هل يمنع ذلك المراجعة الأولى؟', True, False)],
     },
     "bonus": {
         "en": [
@@ -453,6 +472,7 @@ THEMES: dict[str, dict[str, list[tuple[str, str, bool, bool]]]] = {
             ("Bonus piccolo, deposito grande bloccato", "Il bonus era minimo rispetto al deposito. Fattibilita dalle prove?", True, False),
             ("Aiuto a leggere il PDF dei termini", "E lungo. Quali clausole prioritizzare per un esame legale?", True, False),
         ],
+        "ar": [('استخدموا المكافأة لمنع السحب', 'بعد طلب السحب استشهد الدعم بقواعد مكافأة لم أفعّلها. الرصيد ظاهر. استشارة مجانية؟', True, True), ('شروط الرول أوفر تغيرت في المنتصف', 'الدردشة وعدت برقم والمستند بآخر. حفظت الاثنين. التحقق من المطالبة؟', True, True), ('مكافأة صغيرة وإيداع كبير عالق', 'المكافأة ضئيلة مقابل الإيداع. الجدوى من الأدلة؟', True, False), ('مساعدة في قراءة ملف الشروط', 'طويل. أي بنود تُقدَّم أولا للمراجعة القانونية؟', True, False)],
     },
 }
 
@@ -492,7 +512,16 @@ GUIDE_MAP: list[tuple[str, str, str]] = [
     ("es/estafa-sentimental-criptomonedas", "es", "pig"),
     ("es/estafa-trading-broker", "es", "broker"),
     ("es/recuperar-dinero-estafa", "es", "recovery"),
+    ("ar/ihtiyal-online", "ar", "online"),
+    ("ar/istirdad-amwal-ihtiyal", "ar", "recovery"),
+    ("ar/nasb-forex", "ar", "broker"),
+    ("ar/nasb-umlat-raqamiya", "ar", "crypto"),
+    ("ar/wasit-yamna-alsahb", "ar", "withdrawal"),
+    ("ar/muhami-ihtiyal-online", "ar", "lawyer"),
+    ("ar/ihtiyal-istiqtab-crypto", "ar", "pig"),
+    ("ar/kayf-atahaqqaq-min-wasit", "ar", "license"),
 ]
+
 
 
 def build_thread(key: str, lang: str, theme: str, today: date) -> list[dict]:
